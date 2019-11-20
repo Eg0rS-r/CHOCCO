@@ -1,0 +1,218 @@
+@import url(./layout/normalize.css);
+@import url(./layout/fonts.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Alegreya_Sans"; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #0D0D0D; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.btn {
+  color: #FFF;
+  background: #0F5A47;
+  font-size: 19px;
+  text-transform: uppercase;
+  padding: 20px 35px;
+  line-height: 19px;
+  border-radius: 50px;
+  font-weight: 800;
+  width: fit-content;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); }
+
+.btn--header {
+  color: #0F5A47;
+  background: #FFF; }
+
+.progress-bar {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 50%;
+  right: 45px;
+  transform: translate(-50%, -50%); }
+
+.progress-bar__item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFF;
+  margin-bottom: 16px;
+  position: relative; }
+  .progress-bar__item:last-child {
+    margin-bottom: 0; }
+  .progress-bar__item--active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.text {
+  max-width: 500px; }
+  .text--advant {
+    margin: auto;
+    text-align: center; }
+
+.text__title {
+  font-weight: bold;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 60px;
+  margin-bottom: 10px; }
+  .text__title--advant {
+    font-size: 48px; }
+
+.text__desc {
+  font-size: 21px;
+  margin-bottom: 33px; }
+  .text__desc--advant {
+    color: #666666; }
+
+.header {
+  width: 100%;
+  display: flex;
+  background: url(../img/header/pattern.png) 100% 50% no-repeat, #61c4d9;
+  height: 650px;
+  color: #fff;
+  padding: 10px 0 45px;
+  position: relative;
+  margin-bottom: 113px; }
+
+.container--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+
+.logo {
+  font-family: 'Museo_Sans';
+  font-size: 24px;
+  line-height: 21px;
+  width: 50px;
+  color: #fff;
+  font-weight: 500; }
+  .logo a {
+    color: #fff; }
+
+.menu__list {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 40px; }
+
+.menu__item {
+  color: #fff;
+  margin-right: 20px;
+  font-size: 18px; }
+  .menu__item:last-child {
+    margin-right: 0; }
+  .menu__item a {
+    color: #fff; }
+
+.contact {
+  font-family: 'Alegreya_Sans';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase; }
+
+.phone-img {
+  margin-right: 4px; }
+
+.features__list {
+  display: flex;
+  flex-direction: row;
+  max-width: 480px;
+  justify-content: stretch; }
+
+.features__item {
+  width: fit-content;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto; }
+  .features__item:last-child {
+    margin-right: 0; }
+
+.features__img svg {
+  width: 45px;
+  margin-right: 6px;
+  fill: none;
+  stroke: #B0F7FF;
+  stroke-width: 0.5;
+  stroke-miterlimit: 10; }
+
+.bars {
+  position: absolute;
+  top: 49%;
+  left: 75%;
+  transform: translate(-50%, -50%); }
+
+.berry1 {
+  position: absolute;
+  top: 78%;
+  left: 67%;
+  transform: translate(-50%, -50%); }
+
+.berry2 {
+  position: absolute;
+  top: 99%;
+  left: 87%;
+  transform: translate(-50%, -50%); }
+
+.leaves1 {
+  position: absolute;
+  top: 70%;
+  left: 88%;
+  transform: translate(-50%, -50%); }
+
+.leaves2 {
+  position: absolute;
+  top: 96.5%;
+  left: 67%;
+  transform: translate(-50%, -50%); }
+
+.leaves3 {
+  position: absolute;
+  top: 91%;
+  left: 3%;
+  transform: translate(-50%, -5); }
+
+.advant {
+  height: 650px;
+  background: url(../../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #FFF; }
+
+/*# sourceMappingURL=main.css.map */

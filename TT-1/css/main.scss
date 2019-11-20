@@ -1,0 +1,45 @@
+@import "./layout/normalize.css";
+@import "./layout/fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya_Sans";
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #0D0D0D;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@import "./block/btn";
+@import "./block/progress-bar";
+@import "./block/text";
+
+@import "./block/header";
+@import "./block/menu";
+@import "./block/features";
+@import "./block/decor";
+
+@import "./block/advant";

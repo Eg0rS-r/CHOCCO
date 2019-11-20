@@ -1,0 +1,26 @@
+.text {
+  max-width: 500px;
+  &--advant {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.text__title {
+  font-weight: bold;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 60px;
+  margin-bottom: 10px;
+  &--advant {
+    font-size: 48px;
+  }
+}
+
+.text__desc {
+  font-size: 21px;
+  margin-bottom: 33px;
+  &--advant {
+    color: #666666;
+  }
+}

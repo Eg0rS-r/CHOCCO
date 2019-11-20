@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  display: flex;
+  background: 
+    url(../img/header/pattern.png) 100% 50% no-repeat,
+    #61c4d9;
+  height: 650px;
+  color: #fff;
+  padding: 10px 0 45px;
+  position: relative;
+  margin-bottom: 113px;
+}
+
+.container--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
