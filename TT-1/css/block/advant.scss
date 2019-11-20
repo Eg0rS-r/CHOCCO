@@ -1,6 +1,35 @@
 .advant {
   height: 650px;
-  background: 
-    url(../../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat,
-    #FFF;
+  background: url(../../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  position: relative;
+}
+
+.card-list {
+  @include center-flex;
+  flex-direction: row;
+}
+
+.card-list__item {
+  max-width: 300px;
+  margin-right: 65px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.card-list__circle-img {
+  padding: 29px;
+  background: #F2F5F4;
+  border-radius: 50%;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+  svg {
+    margin: auto;
+    width: 66px;
+    fill: none;
+    stroke: #2A2A29;
+    stroke-width: 0.76;
+    stroke-miterlimit: 10;
+  }
 }

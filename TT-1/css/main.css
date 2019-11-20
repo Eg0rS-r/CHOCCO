@@ -72,9 +72,10 @@ a {
 
 .text {
   max-width: 500px; }
-  .text--advant {
+  .text--center {
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 50px; }
 
 .text__title {
   font-weight: bold;
@@ -82,14 +83,21 @@ a {
   text-transform: uppercase;
   line-height: 60px;
   margin-bottom: 10px; }
-  .text__title--advant {
+  .text__title--center {
     font-size: 48px; }
+  .text__title--card {
+    text-transform: capitalize;
+    font-size: 27px; }
 
 .text__desc {
-  font-size: 21px;
-  margin-bottom: 33px; }
-  .text__desc--advant {
-    color: #666666; }
+  font-size: 21px; }
+  .text__desc--center {
+    color: #666666;
+    font-size: 18px; }
+  .text__desc--card {
+    font-weight: 300; }
+  .text__desc--first-scr {
+    margin-bottom: 33px; }
 
 .header {
   width: 100%;
@@ -99,7 +107,7 @@ a {
   color: #fff;
   padding: 10px 0 45px;
   position: relative;
-  margin-bottom: 113px; }
+  margin-bottom: 100px; }
 
 .container--header {
   display: flex;
@@ -209,10 +217,44 @@ a {
   position: absolute;
   top: 91%;
   left: 3%;
-  transform: translate(-50%, -5); }
+  transform: translate(-50%, -50%); }
+
+.raspberries {
+  position: absolute;
+  top: 77%;
+  left: 0%;
+  transform: translate(0%, -50%); }
 
 .advant {
   height: 650px;
-  background: url(../../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #FFF; }
+  background: url(../../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  position: relative; }
+
+.card-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+
+.card-list__item {
+  max-width: 300px;
+  margin-right: 65px; }
+  .card-list__item:last-child {
+    margin-right: 0; }
+
+.card-list__circle-img {
+  padding: 29px;
+  background: #F2F5F4;
+  border-radius: 50%;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px; }
+  .card-list__circle-img svg {
+    margin: auto;
+    width: 66px;
+    fill: none;
+    stroke: #2A2A29;
+    stroke-width: 0.76;
+    stroke-miterlimit: 10; }
 
 /*# sourceMappingURL=main.css.map */

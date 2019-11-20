@@ -1,8 +1,9 @@
 .text {
   max-width: 500px;
-  &--advant {
+  &--center {
     margin: auto;
     text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -12,15 +13,25 @@
   text-transform: uppercase;
   line-height: 60px;
   margin-bottom: 10px;
-  &--advant {
+  &--center {
     font-size: 48px;
+  }
+  &--card { 
+    text-transform: capitalize;
+    font-size: 27px;
   }
 }
 
 .text__desc {
   font-size: 21px;
-  margin-bottom: 33px;
-  &--advant {
+  &--center {
     color: #666666;
+    font-size: 18px;
+  }
+  &--card {
+    font-weight: 300;
+  }
+  &--first-scr {
+    margin-bottom: 33px;
   }
 }
