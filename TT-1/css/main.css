@@ -227,7 +227,7 @@ a {
 
 .advant {
   height: 650px;
-  background: url(../../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
   position: relative; }
 
 .card-list {
@@ -236,25 +236,63 @@ a {
   justify-content: center;
   flex-direction: row; }
 
-.card-list__item {
-  max-width: 300px;
-  margin-right: 65px; }
-  .card-list__item:last-child {
-    margin-right: 0; }
-
-.card-list__circle-img {
-  padding: 29px;
-  background: #F2F5F4;
+.card-list__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+  background: #f2f5f4;
   border-radius: 50%;
-  width: fit-content;
   margin: auto;
   margin-bottom: 20px; }
-  .card-list__circle-img svg {
-    margin: auto;
+  .card-list__circle svg {
     width: 66px;
     fill: none;
-    stroke: #2A2A29;
+    stroke: #2a2a29;
     stroke-width: 0.76;
     stroke-miterlimit: 10; }
+
+.circle-sml {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #f2f5f4;
+  position: absolute;
+  top: 62.5px;
+  left: 100%;
+  transform: translate(-50%, -50%); }
+  .circle-sml::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #f2f5f4;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translate(-50%, -50%); }
+  .circle-sml::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #f2f5f4;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translate(0%, -50%); }
+
+.card-list__item {
+  box-sizing: content-box;
+  max-width: 300px;
+  padding-left: 34px;
+  padding-right: 34px;
+  position: relative; }
+  .card-list__item:last-child {
+    padding-right: 0;
+    margin-right: 0; }
+  .card-list__item:first-child {
+    padding-left: 0; }
 
 /*# sourceMappingURL=main.css.map */
