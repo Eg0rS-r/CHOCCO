@@ -56,9 +56,10 @@ a{
 /*HEADER*/
 
 @import "./block/header";
+@import "./block/header-text";
 @import "./block/menu";
 @import "./block/features";
-@import "./block/decor";
+@import "./block/header-decor";
 
 @import "./block/advant";
 @import "./block/card-list";
