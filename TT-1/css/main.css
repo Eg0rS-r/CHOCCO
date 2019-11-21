@@ -27,6 +27,8 @@ a {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 50px; }
+  .block-title--margin {
+    margin-bottom: 10px; }
 
 .avatar-img {
   display: block;
@@ -83,34 +85,28 @@ a {
     top: 50%;
     transform: translate(-50%, -50%); }
 
-.text {
-  max-width: 500px; }
-  .text--center {
-    margin: auto;
-    text-align: center;
-    margin-bottom: 50px; }
+.text-center {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px; }
 
-.text__title {
+.text-center__title {
   font-weight: bold;
   font-size: 60px;
   text-transform: uppercase;
   line-height: 60px;
   margin-bottom: 10px; }
-  .text__title--center {
-    font-size: 48px; }
-  .text__title--card {
+  .text-center__title--card {
     text-transform: capitalize;
     font-size: 27px; }
 
-.text__desc {
-  font-size: 21px; }
-  .text__desc--center {
-    color: #666666;
-    font-size: 18px; }
-  .text__desc--card {
+.text-center__desc {
+  font-size: 21px;
+  color: #666666;
+  font-size: 18px; }
+  .text-center__desc--card {
     font-weight: 300; }
-  .text__desc--first-scr {
-    margin-bottom: 33px; }
 
 /*HEADER*/
 .header {
@@ -242,15 +238,10 @@ a {
   left: 3%;
   transform: translate(-50%, -50%); }
 
-.header__raspberries {
-  position: absolute;
-  top: 77%;
-  left: 0%;
-  transform: translate(0%, -50%); }
-
+/*ADVANTAGES*/
 .advant {
   height: 650px;
-  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 25% no-repeat, #fff;
   position: relative; }
 
 .card-list {
@@ -318,6 +309,12 @@ a {
   .card-list__item:first-child {
     padding-left: 0; }
 
+.advant__raspberries {
+  position: absolute;
+  top: 77%;
+  left: 0%;
+  transform: translate(0%, -50%); }
+
 /*FEEDBACK*/
 .feedback {
   height: 650px;
@@ -374,6 +371,7 @@ a {
   justify-content: center; }
 
 .review-list__item {
+  cursor: pointer;
   margin-right: 10px;
   width: 68px;
   height: 68px;
