@@ -20,6 +20,12 @@ a{
   color: #0D0D0D;
 }
 
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   width: 100%;
   max-width: 960px;
@@ -27,15 +33,27 @@ a{
   padding: 0 10px;
 }
 
-@mixin center-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.block-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.avatar-img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @import "./block/btn";
 @import "./block/progress-bar";
 @import "./block/text";
+
+
+/*HEADER*/
 
 @import "./block/header";
 @import "./block/menu";
@@ -45,4 +63,14 @@ a{
 @import "./block/advant";
 @import "./block/card-list";
 
-@import "./block/feedback";
+
+/*FEEDBACK*/
+
+.feedback {
+  height: 650px;
+  position: relative;
+}
+
+@import "./block/review";
+@import "./block/review-list";
+@import "./block/decor-feedback";

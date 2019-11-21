@@ -1,6 +1,7 @@
 .menu {
   @include center-flex;
   flex-direction: row;
+  color: #fff;
 }
 
 .logo {
@@ -8,11 +9,7 @@
   font-size: 24px;
   line-height: 21px;
   width: 50px;
-  color: #fff;
   font-weight: 500; 
-  a {
-    color: #fff;
-  }
 }
 
 .menu__list {
@@ -25,7 +22,6 @@
 }
 
 .menu__item {
-  color: #fff;
   margin-right: 20px;
   font-size: 18px;
   &:last-child {
@@ -37,7 +33,6 @@
 }
 
 .contact {
-  font-family: 'Alegreya_Sans';
   @include center-flex;
   color: #fff;
   font-size: 24px;

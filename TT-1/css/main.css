@@ -21,6 +21,19 @@ a {
   margin: 0 auto;
   padding: 0 10px; }
 
+.block-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px; }
+
+.avatar-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
 .btn {
   color: #FFF;
   background: #0F5A47;
@@ -99,6 +112,7 @@ a {
   .text__desc--first-scr {
     margin-bottom: 33px; }
 
+/*HEADER*/
 .header {
   width: 100%;
   display: flex;
@@ -118,17 +132,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row; }
+  flex-direction: row;
+  color: #fff; }
 
 .logo {
   font-family: 'Museo_Sans';
   font-size: 24px;
   line-height: 21px;
   width: 50px;
-  color: #fff;
   font-weight: 500; }
-  .logo a {
-    color: #fff; }
 
 .menu__list {
   flex: 1;
@@ -139,7 +151,6 @@ a {
   margin: 0 40px; }
 
 .menu__item {
-  color: #fff;
   margin-right: 20px;
   font-size: 18px; }
   .menu__item:last-child {
@@ -148,7 +159,6 @@ a {
     color: #fff; }
 
 .contact {
-  font-family: 'Alegreya_Sans';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,12 +305,18 @@ a {
   .card-list__item:first-child {
     padding-left: 0; }
 
+/*FEEDBACK*/
+.feedback {
+  height: 650px;
+  position: relative; }
+
 .review {
   background: url(../img/feedback/rasp-bush.jpg) 100% 0% no-repeat, #F8FAF9;
   display: flex;
   flex-direction: row;
   padding: 50px 0 35px 45px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 23px; }
   .review::before {
     content: '';
     position: absolute;
@@ -319,11 +335,8 @@ a {
   overflow: hidden;
   margin-right: 20px; }
 
-.avatar__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: none; }
+.review__text {
+  margin-top: 15px; }
 
 .review__title {
   font-weight: 500;
@@ -341,5 +354,40 @@ a {
   font-size: 18px;
   color: #666666;
   font-weight: 500; }
+
+.review-list {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.review-list__item {
+  margin-right: 10px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: content-box; }
+  .review-list__item:last-child {
+    margin-right: 0; }
+  .review-list__item--active {
+    border: 6px solid #0F5A47; }
+
+.feedback__pattern {
+  position: absolute;
+  top: 94%;
+  left: 0%;
+  transform: translate(0%, -50%); }
+
+.feedback__berries {
+  position: absolute;
+  top: 6%;
+  right: 1%;
+  transform: translate(0%, -50%); }
+
+.feedback__berries2 {
+  position: absolute;
+  top: 92%;
+  left: 0.5%;
+  transform: translate(0%, -50%); }
 
 /*# sourceMappingURL=main.css.map */
