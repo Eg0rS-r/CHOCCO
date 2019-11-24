@@ -12,7 +12,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #FFF;
+  background: $white;
   margin-bottom: 16px;
   position: relative;
   &:last-child {
@@ -24,7 +24,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 50%;
     left: 50%;
     top: 50%;

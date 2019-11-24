@@ -1,5 +1,5 @@
-@import "./layout/normalize.css";
-@import "./layout/fonts.css";
+@import "./layout/normalize";
+@import "./layout/fonts";
 
 * {
   margin: 0;
@@ -11,14 +11,23 @@ body {
   font-family: "Alegreya_Sans";
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
-  color: #0D0D0D;
+  color: #0d0d0d;
 }
+
+
+// COLORS
+$green: #0F5A47;
+$white: #FFF;
+$text-black: #0D0D0D;
+$text-grey: #666666;
+
+
 
 @mixin center-flex {
   display: flex;
@@ -29,8 +38,12 @@ a{
 .container {
   width: 100%;
   max-width: 960px;
+  height: inherit;
   margin: 0 auto;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .block-title {
@@ -44,7 +57,15 @@ a{
   }
 }
 
-.avatar-img{
+.logo {
+  font-family: 'Museo_Sans';
+  font-size: 24px;
+  line-height: 21px;
+  width: 50px;
+  font-weight: 500; 
+}
+
+.avatar-img {
   display: block;
   width: 100%;
   height: 100%;
@@ -53,37 +74,70 @@ a{
 
 @import "./block/btn";
 @import "./block/progress-bar";
-@import "./block/text-center";
+@import "./block/text";
 
 
 /*HEADER*/
 
-@import "./block/header";
-@import "./block/header-text";
-@import "./block/menu";
-@import "./block/features";
-@import "./block/decor-header";
+.header {
+  padding-top: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+}
 
+@import "./block/menu";
+@import "./block/contact";
+
+
+/*INTRO*/
+
+@import "./block/intro";
+@import "./block/intro-text";
+@import "./block/features";
 
 /*ADVANTAGES*/
 
 .advant {
-  height: 650px;
-  background: url(../img/why-chocco/leaves-pattern.png) 0% 25% no-repeat, #fff;
+  height: 100vh;
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
   position: relative;
+  &::before {
+    content: "";
+    background: url(../img/why-chocco/raspberries.png);
+    position: absolute;
+    top: 64%;
+    left: 0%;
+    width: 161px;
+    height: 315px;
+  }
 }
 
 @import "./block/card-list";
-@import "./block/decor-advant";
-
 
 /*FEEDBACK*/
 
 .feedback {
-  height: 650px;
+  height: 100vh;
   position: relative;
+  &::before {
+    content: "";
+    background: url(../img/feedback/decor-feedback1.png);
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 150px;
+    height: 86px;
+  }
+  &::after {
+    content: "";
+    background: url(../img/feedback/decor-feedback2.png);
+    position: absolute;
+    top: 72%;
+    left: 0%;
+    width: 139px;
+    height: 321px;
+  }
 }
 
 @import "./block/review";
 @import "./block/review-list";
-@import "./block/decor-feedback";

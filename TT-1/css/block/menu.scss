@@ -1,14 +1,6 @@
 .menu {
   @include center-flex;
-  flex-direction: row;
-}
 
-.logo {
-  font-family: 'Museo_Sans';
-  font-size: 24px;
-  line-height: 21px;
-  width: 50px;
-  font-weight: 500; 
 }
 
 .menu__list {
@@ -21,7 +13,7 @@
 }
 
 .menu__item {
-  margin-right: 20px;
+  margin-right: 25px;
   font-size: 18px;
   &:last-child {
     margin-right: 0;
@@ -29,15 +21,4 @@
   a {
     color: #fff;
   }
-}
-
-.contact {
-  @include center-flex;
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.phone-img {
-  margin-right: 4px;
 }

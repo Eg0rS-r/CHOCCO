@@ -1,6 +1,5 @@
-.features__list {
+.features {
   display: flex;
-  flex-direction: row;
   max-width: 480px;
   justify-content: stretch;;
 }
@@ -9,7 +8,6 @@
   width: fit-content;
   font-size: 16px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin: auto;
   &:last-child {
