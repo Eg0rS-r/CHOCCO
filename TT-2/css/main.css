@@ -428,12 +428,6 @@ a {
   width: 50px;
   font-weight: 500; }
 
-.avatar-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
 .btn {
   color: #FFF;
   background: #0F5A47;
@@ -462,16 +456,16 @@ a {
   right: 45px;
   transform: translate(-50%, -50%); }
 
-.progress-bar__item {
+.progress-bar__link {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #FFF;
   margin-bottom: 16px;
   position: relative; }
-  .progress-bar__item:last-child {
+  .progress-bar__link:last-child {
     margin-bottom: 0; }
-  .progress-bar__item--active::after {
+  .progress-bar__link--active::after {
     content: '';
     display: block;
     position: absolute;
@@ -504,6 +498,19 @@ a {
   font-size: 18px; }
   .text__desc--card {
     font-weight: 300; }
+
+.avatar {
+  width: 254px;
+  height: 260px;
+  overflow: hidden;
+  margin-right: 20px; }
+
+.avatar-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover; }
 
 /*HEADER*/
 .header {
@@ -632,7 +639,7 @@ a {
     content: "";
     background: url(../img/why-chocco/raspberries.png);
     position: absolute;
-    top: 64%;
+    top: 73%;
     left: 0%;
     width: 161px;
     height: 315px; }
@@ -715,7 +722,7 @@ a {
   content: "";
   background: url(../img/feedback/decor-feedback2.png);
   position: absolute;
-  top: 72%;
+  top: 78%;
   left: 0%;
   width: 139px;
   height: 321px; }
@@ -738,12 +745,6 @@ a {
     background: #fff;
     clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
     transform: translate(-50%, -50%); }
-
-.avatar {
-  width: 254px;
-  height: 260px;
-  overflow: hidden;
-  margin-right: 20px; }
 
 .review__text {
   margin-top: 15px; }
@@ -784,24 +785,68 @@ a {
     border: 6px solid #0F5A47; }
 
 /*TEAM*/
-.team {
-  height: 100vh;
-  position: relative; }
-  .team::before {
-    content: "";
-    background: url(../img/team/pattern-team.png);
-    position: absolute;
-    top: 10%;
-    right: 1%;
-    width: 150px;
-    height: 86px; }
-  .team::after {
-    content: "";
-    background: url(../img/team/decor-team.png);
-    position: absolute;
-    top: 72%;
-    left: 0%;
-    width: 139px;
-    height: 321px; }
+.team::before {
+  content: "";
+  background: url(../img/team/pattern-team.png);
+  position: absolute;
+  top: -31%;
+  right: 0;
+  width: 196px;
+  height: 578px; }
+.team::after {
+  content: "";
+  background: url(../img/team/decor-team.png);
+  position: absolute;
+  top: 100%;
+  left: 3%;
+  transform: translateY(-50%);
+  width: 104px;
+  height: 114px; }
+
+.team__list {
+  display: inline-flex; }
+
+.team__item {
+  flex: 1;
+  margin-right: 20px; }
+  .team__item:last-child {
+    margin-right: 0; }
+
+.team__avatar {
+  overflow: hidden;
+  height: 288px;
+  margin-bottom: 22px; }
+
+.team__name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #323232;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; }
+  .team__name::after {
+    content: '';
+    display: inline-flex;
+    margin-top: 8px;
+    margin-left: 6px;
+    border: 6px solid transparent;
+    border-top: 6px solid #0F5A47;
+    border-radius: 2px; }
+
+.team__text {
+  text-align: center;
+  color: #666666; }
+
+.team__desc {
+  height: 0px;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666; }
+
+.team__job-title {
+  font-weight: 400;
+  color: #323232; }
 
 /*# sourceMappingURL=main.css.map */

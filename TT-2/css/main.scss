@@ -76,16 +76,10 @@ $text-grey: #666666;
   font-weight: 500; 
 }
 
-.avatar-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 @import "./block/btn";
 @import "./block/progress-bar";
 @import "./block/text";
+@import "./block/avatar";
 
 
 /*HEADER*/
@@ -114,7 +108,7 @@ $text-grey: #666666;
     content: "";
     background: url(../img/why-chocco/raspberries.png);
     position: absolute;
-    top: 64%;
+    top: 73%;
     left: 0%;
     width: 161px;
     height: 315px;
@@ -139,7 +133,7 @@ $text-grey: #666666;
     content: "";
     background: url(../img/feedback/decor-feedback2.png);
     position: absolute;
-    top: 72%;
+    top: 78%;
     left: 0%;
     width: 139px;
     height: 321px;
@@ -153,25 +147,24 @@ $text-grey: #666666;
 /*TEAM*/
 
 .team {
-  height: 100vh;
-  position: relative;
   &::before {
     content: "";
     background: url(../img/team/pattern-team.png);
     position: absolute;
-    top: 10%;
-    right: 1%;
-    width: 150px;
-    height: 86px;
+    top: -31%;
+    right: 0;
+    width: 196px;
+    height: 578px;
   }
   &::after {
     content: "";
     background: url(../img/team/decor-team.png);
     position: absolute;
-    top: 72%;
-    left: 0%;
-    width: 139px;
-    height: 321px;
+    top: 100%;
+    left: 3%;
+    transform: translateY(-50%);
+    width: 104px;
+    height: 114px;
   }
 }
 

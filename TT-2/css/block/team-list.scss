@@ -1,0 +1,54 @@
+.team__list {
+  display: inline-flex;
+}
+
+.team__item {
+  flex: 1;
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team__avatar {
+  overflow: hidden;
+  height: 288px;
+  margin-bottom: 22px;
+}
+
+.team__name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #323232;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  &::after {
+    content: '';
+    display: inline-flex;
+    margin-top: 8px;
+    margin-left: 6px;
+    border: 6px solid transparent; 
+    border-top: 6px solid $green;
+    border-radius: 2px;
+  }
+}
+
+.team__text {
+  text-align: center;
+  color: #666666;
+}
+
+.team__desc {
+  height: 0px;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.team__job-title {
+  font-weight: 400;
+  color: #323232;
+}
