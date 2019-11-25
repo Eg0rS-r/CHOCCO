@@ -1,0 +1,27 @@
+.features {
+  display: flex;
+  max-width: 480px;
+  justify-content: stretch;;
+}
+
+.features__item {
+  width: fit-content;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.features__img {
+  svg {
+    width: 45px;
+    margin-right: 6px;
+    fill: none;
+    stroke: #B0F7FF;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+  }
+}

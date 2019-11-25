@@ -1,0 +1,24 @@
+.menu {
+  @include center-flex;
+
+}
+
+.menu__list {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 40px;
+}
+
+.menu__item {
+  margin-right: 25px;
+  font-size: 18px;
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    color: #fff;
+  }
+}

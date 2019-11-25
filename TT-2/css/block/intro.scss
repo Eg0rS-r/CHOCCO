@@ -1,0 +1,36 @@
+.intro {
+  width: 100%;
+  display: flex;
+  background: url(../img/intro/bars.png) 95% 40% no-repeat, url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
+  height: 100vh;
+  color: #fff;
+  padding: 10px 0 45px;
+  position: relative;
+  &::before {
+    content: "";
+    background: url(../img/intro/decor-intro2.png);
+    z-index: 10;
+    position: absolute;
+    top: 91%;
+    left: 3%;
+    width: 59px;
+    height: 112px;
+  }
+  &::after {
+    z-index: 10;
+    content: "";
+    background: url(../img/intro/decor-intro1.png);
+    position: absolute;
+    top: 61%;
+    right: 1%;
+    width: 460px;
+    height: 341px;
+  }
+}
+
+.container--intro {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

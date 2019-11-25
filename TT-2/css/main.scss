@@ -1,0 +1,143 @@
+@import "./layout/normalize";
+@import "./layout/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya_Sans";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #0d0d0d;
+}
+
+
+// COLORS
+$green: #0F5A47;
+$white: #FFF;
+$text-black: #0D0D0D;
+$text-grey: #666666;
+
+
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  &--margin {
+    margin-bottom: 10px;
+  }
+}
+
+.logo {
+  font-family: 'Museo_Sans';
+  font-size: 24px;
+  line-height: 21px;
+  width: 50px;
+  font-weight: 500; 
+}
+
+.avatar-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@import "./block/btn";
+@import "./block/progress-bar";
+@import "./block/text";
+
+
+/*HEADER*/
+
+.header {
+  padding-top: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+@import "./block/menu";
+@import "./block/contact";
+
+
+/*INTRO*/
+
+@import "./block/intro";
+@import "./block/intro-text";
+@import "./block/features";
+
+/*ADVANTAGES*/
+
+.advant {
+  height: 100vh;
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  position: relative;
+  &::before {
+    content: "";
+    background: url(../img/why-chocco/raspberries.png);
+    position: absolute;
+    top: 64%;
+    left: 0%;
+    width: 161px;
+    height: 315px;
+  }
+}
+
+@import "./block/card-list";
+
+/*FEEDBACK*/
+
+.feedback {
+  height: 100vh;
+  position: relative;
+  &::before {
+    content: "";
+    background: url(../img/feedback/decor-feedback1.png);
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 150px;
+    height: 86px;
+  }
+  &::after {
+    content: "";
+    background: url(../img/feedback/decor-feedback2.png);
+    position: absolute;
+    top: 72%;
+    left: 0%;
+    width: 139px;
+    height: 321px;
+  }
+}
+
+@import "./block/review";
+@import "./block/review-list";
