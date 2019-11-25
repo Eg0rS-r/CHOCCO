@@ -1,11 +1,9 @@
 .intro {
   width: 100%;
   display: flex;
-  background: url(../img/intro/bars.png) 95% 40% no-repeat, url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
-  height: 100vh;
+  background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
   padding: 10px 0 45px;
-  position: relative;
   &::before {
     content: "";
     background: url(../img/intro/decor-intro2.png);
@@ -30,7 +28,22 @@
 
 .container--intro {
   height: auto;
+  display: inline-flex;
+}
+
+.split {
+  display: inline-flex;
+  flex: 1;
+}
+
+.split__block {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &--left {
+    align-items: center;
+  }
+  &--right {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
 }

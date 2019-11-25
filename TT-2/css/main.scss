@@ -35,6 +35,11 @@ $text-grey: #666666;
   justify-content: center;
 }
 
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 960px;
@@ -44,6 +49,11 @@ $text-grey: #666666;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.cont-section {
+  height: 100vh;
+  position: relative;
 }
 
 .block-title {
@@ -58,6 +68,7 @@ $text-grey: #666666;
 }
 
 .logo {
+  color: #FFF;
   font-family: 'Museo_Sans';
   font-size: 24px;
   line-height: 21px;
@@ -98,9 +109,7 @@ $text-grey: #666666;
 /*ADVANTAGES*/
 
 .advant {
-  height: 100vh;
   background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
-  position: relative;
   &::before {
     content: "";
     background: url(../img/why-chocco/raspberries.png);
@@ -117,8 +126,6 @@ $text-grey: #666666;
 /*FEEDBACK*/
 
 .feedback {
-  height: 100vh;
-  position: relative;
   &::before {
     content: "";
     background: url(../img/feedback/decor-feedback1.png);
@@ -141,3 +148,31 @@ $text-grey: #666666;
 
 @import "./block/review";
 @import "./block/review-list";
+
+
+/*TEAM*/
+
+.team {
+  height: 100vh;
+  position: relative;
+  &::before {
+    content: "";
+    background: url(../img/team/pattern-team.png);
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 150px;
+    height: 86px;
+  }
+  &::after {
+    content: "";
+    background: url(../img/team/decor-team.png);
+    position: absolute;
+    top: 72%;
+    left: 0%;
+    width: 139px;
+    height: 321px;
+  }
+}
+
+@import "./block/team-list";

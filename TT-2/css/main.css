@@ -393,6 +393,10 @@ a {
   text-decoration: none;
   color: #0d0d0d; }
 
+.wrapper {
+  width: 100%;
+  overflow: hidden; }
+
 .container {
   width: 100%;
   max-width: 960px;
@@ -402,6 +406,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+
+.cont-section {
+  height: 100vh;
+  position: relative; }
 
 .block-title {
   font-size: 48px;
@@ -413,6 +421,7 @@ a {
     margin-bottom: 10px; }
 
 .logo {
+  color: #FFF;
   font-family: 'Museo_Sans';
   font-size: 24px;
   line-height: 21px;
@@ -491,7 +500,6 @@ a {
 
 .text__desc {
   max-width: 500px;
-  font-size: 21px;
   color: #666666;
   font-size: 18px; }
   .text__desc--card {
@@ -542,11 +550,9 @@ a {
 .intro {
   width: 100%;
   display: flex;
-  background: url(../img/intro/bars.png) 95% 40% no-repeat, url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
-  height: 100vh;
+  background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
-  padding: 10px 0 45px;
-  position: relative; }
+  padding: 10px 0 45px; }
   .intro::before {
     content: "";
     background: url(../img/intro/decor-intro2.png);
@@ -568,9 +574,20 @@ a {
 
 .container--intro {
   height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  display: inline-flex; }
+
+.split {
+  display: inline-flex;
+  flex: 1; }
+
+.split__block {
+  flex: 1;
+  display: flex; }
+  .split__block--left {
+    align-items: center; }
+  .split__block--right {
+    align-items: flex-start;
+    justify-content: flex-end; }
 
 .intro__text {
   max-width: 500px; }
@@ -610,9 +627,7 @@ a {
 
 /*ADVANTAGES*/
 .advant {
-  height: 100vh;
-  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
-  position: relative; }
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff; }
   .advant::before {
     content: "";
     background: url(../img/why-chocco/raspberries.png);
@@ -688,25 +703,22 @@ a {
     padding-left: 0; }
 
 /*FEEDBACK*/
-.feedback {
-  height: 100vh;
-  position: relative; }
-  .feedback::before {
-    content: "";
-    background: url(../img/feedback/decor-feedback1.png);
-    position: absolute;
-    top: 10%;
-    right: 1%;
-    width: 150px;
-    height: 86px; }
-  .feedback::after {
-    content: "";
-    background: url(../img/feedback/decor-feedback2.png);
-    position: absolute;
-    top: 72%;
-    left: 0%;
-    width: 139px;
-    height: 321px; }
+.feedback::before {
+  content: "";
+  background: url(../img/feedback/decor-feedback1.png);
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  width: 150px;
+  height: 86px; }
+.feedback::after {
+  content: "";
+  background: url(../img/feedback/decor-feedback2.png);
+  position: absolute;
+  top: 72%;
+  left: 0%;
+  width: 139px;
+  height: 321px; }
 
 .review {
   background: url(../img/feedback/rasp-bush.jpg) 100% 0% no-repeat, #F8FAF9;
@@ -770,5 +782,26 @@ a {
     margin-right: 0; }
   .review-list__item--active {
     border: 6px solid #0F5A47; }
+
+/*TEAM*/
+.team {
+  height: 100vh;
+  position: relative; }
+  .team::before {
+    content: "";
+    background: url(../img/team/pattern-team.png);
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 150px;
+    height: 86px; }
+  .team::after {
+    content: "";
+    background: url(../img/team/decor-team.png);
+    position: absolute;
+    top: 72%;
+    left: 0%;
+    width: 139px;
+    height: 321px; }
 
 /*# sourceMappingURL=main.css.map */
