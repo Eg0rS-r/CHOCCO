@@ -383,8 +383,12 @@ template {
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  font-size: 16px; }
+
 body {
-  font-family: "Alegreya_Sans"; }
+  font-family: "Alegreya_Sans";
+  font-size: 16px; }
 
 ul {
   list-style: none; }
@@ -393,6 +397,12 @@ a {
   text-decoration: none;
   color: #0d0d0d; }
 
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 16px; } }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px; } }
 .wrapper {
   width: 100%;
   overflow: hidden; }
@@ -419,18 +429,22 @@ a {
   margin-bottom: 50px; }
   .block-title--margin {
     margin-bottom: 10px; }
+  .block-title--left {
+    text-align: left;
+    flex: 1;
+    margin-top: 95px; }
 
 .logo {
-  color: #FFF;
-  font-family: 'Museo_Sans';
+  color: #fff;
+  font-family: "Museo_Sans";
   font-size: 24px;
   line-height: 21px;
   width: 50px;
   font-weight: 500; }
 
 .btn {
-  color: #FFF;
-  background: #0F5A47;
+  color: #fff;
+  background: #0f5a47;
   font-size: 19px;
   text-transform: uppercase;
   padding: 20px 35px;
@@ -442,8 +456,8 @@ a {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); }
 
 .btn--intro {
-  color: #0F5A47;
-  background: #FFF; }
+  color: #0f5a47;
+  background: #fff; }
 
 .progress-bar {
   position: fixed;
@@ -460,7 +474,7 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #FFF;
+  background: #fff;
   margin-bottom: 16px;
   position: relative; }
   .progress-bar__link:last-child {
@@ -471,7 +485,7 @@ a {
     position: absolute;
     width: 15px;
     height: 15px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     border-radius: 50%;
     left: 50%;
     top: 50%;
@@ -500,8 +514,8 @@ a {
     font-weight: 300; }
 
 .avatar {
-  width: 254px;
-  height: 260px;
+  width: 16.25rem;
+  height: 16.25rem;
   overflow: hidden;
   margin-right: 20px; }
 
@@ -713,32 +727,37 @@ a {
 .feedback::before {
   content: "";
   background: url(../img/feedback/decor-feedback1.png);
+  background-size: cover;
   position: absolute;
   top: 10%;
   right: 1%;
-  width: 150px;
-  height: 86px; }
+  width: 9.4rem;
+  height: 5.39rem; }
 .feedback::after {
   content: "";
   background: url(../img/feedback/decor-feedback2.png);
+  background-size: cover;
   position: absolute;
   top: 78%;
   left: 0%;
-  width: 139px;
-  height: 321px; }
+  width: 8.68rem;
+  height: 20.06rem; }
+
+.container--feedback {
+  align-items: center; }
 
 .review {
   background: url(../img/feedback/rasp-bush.jpg) 100% 0% no-repeat, #F8FAF9;
   display: flex;
-  flex-direction: row;
-  padding: 50px 0 35px 45px;
+  align-items: center;
+  padding: 3.12em 0 2.18em 2.81em;
   position: relative;
-  margin-bottom: 23px; }
+  margin-bottom: 1.43em; }
   .review::before {
     content: '';
     position: absolute;
-    width: 80px;
-    height: 50px;
+    width: 5em;
+    height: 3.12em;
     top: 0%;
     left: 50%;
     border-radius: 50%;
@@ -747,19 +766,19 @@ a {
     transform: translate(-50%, -50%); }
 
 .review__text {
-  margin-top: 15px; }
+  margin-top: 0.93em; }
 
 .review__title {
   font-weight: 500;
   font-size: 30px;
   color: #323232;
-  margin-bottom: 34px; }
+  margin-bottom: 1.13em; }
 
 .review__desc {
   font-size: 18px;
   color: #666666;
-  margin-bottom: 34px;
-  max-width: 460px; }
+  margin-bottom: 1.88em;
+  max-width: 25.55em; }
 
 .review__name {
   font-size: 18px;
@@ -773,17 +792,52 @@ a {
 
 .review-list__item {
   cursor: pointer;
-  margin-right: 10px;
-  width: 68px;
-  height: 68px;
+  margin-right: 0.62em;
+  width: 4.25em;
+  height: 4.25em;
   border-radius: 50%;
   overflow: hidden;
   box-sizing: content-box; }
   .review-list__item:last-child {
     margin-right: 0; }
   .review-list__item--active {
-    border: 6px solid #0F5A47; }
+    border: 0.37em solid #0F5A47; }
 
+@media screen and (max-width: 768px) {
+  .review {
+    max-width: 28.75em;
+    max-height: 37.5em;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 2.37em;
+    padding-right: 2.37em; }
+
+  .review-list__item {
+    width: 5.25em;
+    height: 5.25em; }
+    .review-list__item--active {
+      border: 0.5em solid #0F5A47; }
+
+  .avatar--review {
+    margin-right: 0; }
+
+  .feedback::before {
+    top: 3%;
+    right: -2%; }
+  .feedback::after {
+    top: 84%;
+    left: -2%; }
+
+  .container--feedback {
+    justify-content: space-evenly; } }
+@media screen and (max-width: 480px) {
+  .avatar {
+    width: 10.41rem;
+    height: 10.41rem; }
+
+  .review-list__item {
+    width: 4.25em;
+    height: 4.25em; } }
 /*TEAM*/
 .team::before {
   content: "";
@@ -831,7 +885,7 @@ a {
     margin-top: 8px;
     margin-left: 6px;
     border: 6px solid transparent;
-    border-top: 6px solid #0F5A47;
+    border-top: 6px solid #0f5a47;
     border-radius: 2px; }
 
 .team__text {
@@ -848,5 +902,38 @@ a {
 .team__job-title {
   font-weight: 400;
   color: #323232; }
+
+/*ACCORDION*/
+.accordion {
+  width: 100%;
+  color: #fff;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url(../img/accordion/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative; }
+
+.accord-menu {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: flex-end; }
+
+.accord-menu__item {
+  width: 9.5%;
+  align-items: stretch;
+  background-position: center;
+  background-size: cover; }
+
+.accord-menu__item--1 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../img/accordion/item1.jpg); }
+
+.accord-menu__item--2 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../img/accordion/item2.jpg); }
+
+.accord-menu__item--3 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../img/accordion/item3.jpg); }
 
 /*# sourceMappingURL=main.css.map */

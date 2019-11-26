@@ -1,3 +1,30 @@
+.feedback {
+  &::before {
+    content: "";
+    background: url(../img/feedback/decor-feedback1.png);
+    background-size: cover;
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 9.4rem;
+    height: 5.39rem;
+  }
+  &::after {
+    content: "";
+    background: url(../img/feedback/decor-feedback2.png);
+    background-size: cover;
+    position: absolute;
+    top: 78%;
+    left: 0%;
+    width: 8.68rem;
+    height: 20.06rem;
+  }
+}
+
+.container--feedback {
+  align-items: center;
+}
+
 
 
 

@@ -1,0 +1,44 @@
+@media screen and (max-width: 768px) {
+  .review {
+    max-width: 28.75em;
+    max-height: 37.5em;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 2.37em;
+    padding-right: 2.37em;
+  }
+  .review-list__item {
+    width: 5.25em;
+    height: 5.25em;
+    &--active {
+      border: 0.5em solid #0F5A47;
+    }
+  }
+  .avatar--review {
+    margin-right: 0;
+  }
+  .feedback {
+    &::before {
+      top: 3%;
+      right: -2%;
+    }
+    &::after {
+      top: 84%;
+      left: -2%;
+    }
+  }
+  .container--feedback {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .avatar {
+    width: 10.41rem;
+    height: 10.41rem;
+  }
+  .review-list__item {
+    width: 4.25em;
+    height: 4.25em;
+  }
+}

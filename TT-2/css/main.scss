@@ -7,8 +7,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Alegreya_Sans";
+  font-size: 16px;
 }
 
 ul {
@@ -20,19 +25,35 @@ a {
   color: #0d0d0d;
 }
 
-
 // COLORS
-$green: #0F5A47;
-$white: #FFF;
-$text-black: #0D0D0D;
+$green: #0f5a47;
+$white: #fff;
+$text-black: #0d0d0d;
 $text-grey: #666666;
-
-
 
 @mixin center-flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+
+  }
 }
 
 .wrapper {
@@ -65,22 +86,26 @@ $text-grey: #666666;
   &--margin {
     margin-bottom: 10px;
   }
+  &--left {
+    text-align: left;
+    flex: 1;
+    margin-top: 95px;
+  }
 }
 
 .logo {
-  color: #FFF;
-  font-family: 'Museo_Sans';
+  color: #fff;
+  font-family: "Museo_Sans";
   font-size: 24px;
   line-height: 21px;
   width: 50px;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 @import "./block/btn";
 @import "./block/progress-bar";
 @import "./block/text";
 @import "./block/avatar";
-
 
 /*HEADER*/
 
@@ -92,7 +117,6 @@ $text-grey: #666666;
 
 @import "./block/menu";
 @import "./block/contact";
-
 
 /*INTRO*/
 
@@ -117,31 +141,13 @@ $text-grey: #666666;
 
 @import "./block/card-list";
 
+
 /*FEEDBACK*/
 
-.feedback {
-  &::before {
-    content: "";
-    background: url(../img/feedback/decor-feedback1.png);
-    position: absolute;
-    top: 10%;
-    right: 1%;
-    width: 150px;
-    height: 86px;
-  }
-  &::after {
-    content: "";
-    background: url(../img/feedback/decor-feedback2.png);
-    position: absolute;
-    top: 78%;
-    left: 0%;
-    width: 139px;
-    height: 321px;
-  }
-}
-
+@import "./block/feedback";
 @import "./block/review";
 @import "./block/review-list";
+@import "./block/review-media";
 
 
 /*TEAM*/
@@ -169,3 +175,63 @@ $text-grey: #666666;
 }
 
 @import "./block/team-list";
+
+/*ACCORDION*/
+
+.accordion {
+  width: 100%;
+  color: $white;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.1) 0%, 
+    rgba(#000, 0.1) 100%
+    ),
+    url(../img/accordion/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain; 
+  position: relative;
+}
+
+.accord-menu {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: flex-end;
+}
+
+.accord-menu__item {
+  width: 9.5%;
+  align-items: stretch;
+  background-position: center;
+  background-size: cover;
+}
+
+.accord-menu__item--1 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.6) 0%, 
+    rgba(#000, 0.6) 100%
+    ),
+    url(../img/accordion/item1.jpg);
+}
+
+.accord-menu__item--2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.6) 0%, 
+    rgba(#000, 0.6) 100%
+    ),
+    url(../img/accordion/item2.jpg);
+}
+
+.accord-menu__item--3 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.6) 0%, 
+    rgba(#000, 0.6) 100%
+    ),
+    url(../img/accordion/item3.jpg);
+}
