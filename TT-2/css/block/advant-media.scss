@@ -1,0 +1,18 @@
+@media screen and (max-width: 768px) {
+  .card-list {
+    flex-direction: column;
+  }
+  .card-list__item {
+    padding: 0;
+  }
+  .circle-sml {
+    display: none;
+  }
+  .text__desc {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+}

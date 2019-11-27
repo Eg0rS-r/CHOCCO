@@ -3,7 +3,8 @@
   display: flex;
   background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
-  padding: 10px 0 45px;
+  padding-bottom: 45px;
+  padding-top: 0.62em;
   &::before {
     content: "";
     background: url(../img/intro/decor-intro2.png);

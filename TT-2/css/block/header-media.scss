@@ -1,0 +1,20 @@
+@media screen and (max-width: 768px) {
+  .contact {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .container--intro {
+    padding: 0 1.5em;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .header {
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+}

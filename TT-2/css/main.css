@@ -494,7 +494,7 @@ a {
 .text--center {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 50px; }
+  margin-bottom: 3.12rem; }
 
 .text__title {
   font-weight: bold;
@@ -528,14 +528,36 @@ a {
 
 /*HEADER*/
 .header {
-  padding-top: 10px;
   display: inline-flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.menu-icon {
+  display: none;
+  width: 1.5em;
+  height: 0.25em;
+  background: #FFF;
+  position: relative;
+  border-radius: 2px; }
+  .menu-icon::after, .menu-icon::before {
+    content: '';
+    position: absolute;
+    top: -0.31em;
+    left: 0;
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    border-radius: 2px; }
+  .menu-icon::before {
+    bottom: -0.31em;
+    top: auto;
+    transform: translateY(50%); }
 
 .menu__list {
   flex: 1;
@@ -543,10 +565,10 @@ a {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 40px; }
+  margin: 0 2.5em; }
 
 .menu__item {
-  margin-right: 25px;
+  margin-right: 1.38em;
   font-size: 18px; }
   .menu__item:last-child {
     margin-right: 0; }
@@ -562,18 +584,32 @@ a {
   text-transform: uppercase; }
   .contact::before {
     content: '';
-    margin-right: 4px;
+    margin-right: 0.16em;
     background: url(../img/header/phone.png);
-    width: 12px;
-    height: 11px; }
+    background-size: cover;
+    width: 0.5em;
+    height: 0.5em; }
 
+@media screen and (max-width: 768px) {
+  .contact {
+    display: none; }
+
+  .menu {
+    display: none; }
+
+  .container--intro {
+    padding: 0 1.5em; }
+
+  .menu-icon {
+    display: block; } }
 /*INTRO*/
 .intro {
   width: 100%;
   display: flex;
   background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
-  padding: 10px 0 45px; }
+  padding-bottom: 45px;
+  padding-top: 0.62em; }
   .intro::before {
     content: "";
     background: url(../img/intro/decor-intro2.png);
@@ -646,6 +682,9 @@ a {
   stroke-width: 0.5;
   stroke-miterlimit: 10; }
 
+@media screen and (max-width: 768px) {
+  .intro {
+    padding-top: 1.5em; } }
 /*ADVANTAGES*/
 .advant {
   background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff; }
@@ -653,10 +692,11 @@ a {
     content: "";
     background: url(../img/why-chocco/raspberries.png);
     position: absolute;
+    background-size: cover;
     top: 73%;
     left: 0%;
-    width: 161px;
-    height: 315px; }
+    width: 10.06rem;
+    height: 19.68rem; }
 
 .card-list {
   display: flex;
@@ -672,14 +712,26 @@ a {
   background: #f2f5f4;
   border-radius: 50%;
   margin: auto;
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
   .card-list__circle svg {
-    width: 66px;
-    height: 66px;
+    width: 4.12em;
+    height: 4.12em;
     fill: none;
     stroke: #2a2a29;
     stroke-width: 0.76;
     stroke-miterlimit: 10; }
+
+.card-list__item {
+  box-sizing: content-box;
+  max-width: 18.75em;
+  padding-left: 2.12em;
+  padding-right: 2.12em;
+  position: relative; }
+  .card-list__item:last-child {
+    padding-right: 0;
+    margin-right: 0; }
+  .card-list__item:first-child {
+    padding-left: 0; }
 
 .circle-sml {
   width: 21px;
@@ -711,18 +763,18 @@ a {
     right: -25px;
     transform: translate(0%, -50%); }
 
-.card-list__item {
-  box-sizing: content-box;
-  max-width: 300px;
-  padding-left: 34px;
-  padding-right: 34px;
-  position: relative; }
-  .card-list__item:last-child {
-    padding-right: 0;
-    margin-right: 0; }
-  .card-list__item:first-child {
-    padding-left: 0; }
+@media screen and (max-width: 768px) {
+  .card-list {
+    flex-direction: column; }
 
+  .card-list__item {
+    padding: 0; }
+
+  .circle-sml {
+    display: none; }
+
+  .text__desc {
+    max-width: 100%; } }
 /*FEEDBACK*/
 .feedback::before {
   content: "";
@@ -909,7 +961,7 @@ a {
   color: #fff;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url(../img/accordion/bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative; }
 
 .accord-menu {
@@ -922,7 +974,7 @@ a {
   justify-content: flex-end; }
 
 .accord-menu__item {
-  width: 9.5%;
+  width: 6.25em;
   align-items: stretch;
   background-position: center;
   background-size: cover; }

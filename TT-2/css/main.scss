@@ -107,39 +107,29 @@ $text-grey: #666666;
 @import "./block/text";
 @import "./block/avatar";
 
+
 /*HEADER*/
 
-.header {
-  padding-top: 10px;
-  display: inline-flex;
-  justify-content: space-between;
-}
-
+@import "./block/header";
 @import "./block/menu";
 @import "./block/contact";
+@import "./block/header-media";
+
 
 /*INTRO*/
 
 @import "./block/intro";
 @import "./block/intro-text";
 @import "./block/features";
+@import "./block/intro-media";
+
+
 
 /*ADVANTAGES*/
 
-.advant {
-  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
-  &::before {
-    content: "";
-    background: url(../img/why-chocco/raspberries.png);
-    position: absolute;
-    top: 73%;
-    left: 0%;
-    width: 161px;
-    height: 315px;
-  }
-}
-
+@import "./block/advant";
 @import "./block/card-list";
+@import "./block/advant-media";
 
 
 /*FEEDBACK*/
@@ -188,7 +178,7 @@ $text-grey: #666666;
     ),
     url(../img/accordion/bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain; 
+  background-size: cover; 
   position: relative;
 }
 
@@ -203,7 +193,7 @@ $text-grey: #666666;
 }
 
 .accord-menu__item {
-  width: 9.5%;
+  width: 6.25em;
   align-items: stretch;
   background-position: center;
   background-size: cover;

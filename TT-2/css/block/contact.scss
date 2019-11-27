@@ -5,9 +5,10 @@
   text-transform: uppercase;
   &::before {
     content: '';
-    margin-right: 4px;
+    margin-right: 0.16em;
     background: url(../img/header/phone.png);
-    width: 12px;
-    height: 11px;
+    background-size: cover;
+    width: 0.5em;
+    height: 0.5em;
   }
 }

@@ -1,6 +1,30 @@
 .menu {
   @include center-flex;
+}
 
+.menu-icon {
+  display: none;
+  width: 1.5em;
+  height: 0.25em;
+  background: #FFF;
+  position: relative;
+  border-radius: 2px;
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: -0.31em;
+    left: 0;
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+  }
+  &::before {
+    bottom: -0.31em;
+    top: auto;
+    transform: translateY(50%);
+  }
 }
 
 .menu__list {
@@ -9,11 +33,11 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 40px;
+  margin: 0 2.5em;
 }
 
 .menu__item {
-  margin-right: 25px;
+  margin-right: 1.38em;
   font-size: 18px;
   &:last-child {
     margin-right: 0;
