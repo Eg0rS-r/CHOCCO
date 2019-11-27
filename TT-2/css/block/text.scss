@@ -4,6 +4,9 @@
     text-align: center;
     margin-bottom: 3.12rem;
   }
+  &--card {
+    margin-bottom: 18px;
+  }
 }
 
 .text__title {
@@ -15,6 +18,7 @@
   &--card {
     text-transform: capitalize;
     font-size: 27px;
+    line-height: normal;
   }
 }
 

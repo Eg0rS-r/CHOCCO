@@ -4,12 +4,16 @@
   }
   .card-list__item {
     padding: 0;
+    max-width: 29.37em;
   }
   .circle-sml {
     display: none;
   }
-  .text__desc {
-    max-width: 100%;
+  .card-list__circle {
+    margin-bottom: 1.25em;
+  }
+  .text--center {
+    margin-bottom: 1.25em;
   }
 }
 

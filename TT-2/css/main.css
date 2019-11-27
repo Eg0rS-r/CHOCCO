@@ -496,6 +496,8 @@ a {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 3.12rem; }
+.text--card {
+  margin-bottom: 18px; }
 
 .text__title {
   font-weight: bold;
@@ -505,7 +507,8 @@ a {
   margin-bottom: 10px; }
   .text__title--card {
     text-transform: capitalize;
-    font-size: 27px; }
+    font-size: 27px;
+    line-height: normal; }
 
 .text__desc {
   max-width: 500px;
@@ -757,19 +760,20 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 125px;
-  height: 125px;
+  width: 7.81em;
+  height: 7.81em;
   background: #f2f5f4;
   border-radius: 50%;
   margin: auto;
   margin-bottom: 1.25rem; }
-  .card-list__circle svg {
-    width: 4.12em;
-    height: 4.12em;
-    fill: none;
-    stroke: #2a2a29;
-    stroke-width: 0.76;
-    stroke-miterlimit: 10; }
+
+.card-list__icon {
+  width: 4.12em;
+  height: 4.12em;
+  fill: none;
+  stroke: #2a2a29;
+  stroke-width: 0.76;
+  stroke-miterlimit: 10; }
 
 .card-list__item {
   box-sizing: content-box;
@@ -784,33 +788,33 @@ a {
     padding-left: 0; }
 
 .circle-sml {
-  width: 21px;
-  height: 21px;
+  width: 1.31em;
+  height: 1.31em;
   border-radius: 50%;
   background: #f2f5f4;
   position: absolute;
-  top: 62.5px;
+  top: 3.905em;
   left: 100%;
   transform: translate(-50%, -50%); }
   .circle-sml::after {
-    content: '';
-    width: 13px;
-    height: 13px;
+    content: "";
+    width: 0.81em;
+    height: 0.81em;
     border-radius: 50%;
     background: #f2f5f4;
     position: absolute;
     top: 50%;
-    right: 25px;
+    right: 1.56em;
     transform: translate(-50%, -50%); }
   .circle-sml::before {
-    content: '';
-    width: 13px;
-    height: 13px;
+    content: "";
+    width: 0.81em;
+    height: 0.81em;
     border-radius: 50%;
     background: #f2f5f4;
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -1.56em;
     transform: translate(0%, -50%); }
 
 @media screen and (max-width: 768px) {
@@ -818,13 +822,17 @@ a {
     flex-direction: column; }
 
   .card-list__item {
-    padding: 0; }
+    padding: 0;
+    max-width: 29.37em; }
 
   .circle-sml {
     display: none; }
 
-  .text__desc {
-    max-width: 100%; } }
+  .card-list__circle {
+    margin-bottom: 1.25em; }
+
+  .text--center {
+    margin-bottom: 1.25em; } }
 /*FEEDBACK*/
 .feedback::before {
   content: "";
