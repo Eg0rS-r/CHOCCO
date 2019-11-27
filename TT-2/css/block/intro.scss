@@ -3,7 +3,7 @@
   display: flex;
   background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
-  padding-bottom: 45px;
+  padding-bottom: 2.81em;
   padding-top: 0.62em;
   &::before {
     content: "";
@@ -12,8 +12,8 @@
     position: absolute;
     top: 91%;
     left: 3%;
-    width: 59px;
-    height: 112px;
+    width: 3.68em;
+    height: 7em;
   }
   &::after {
     z-index: 10;
@@ -22,8 +22,8 @@
     position: absolute;
     top: 61%;
     right: 1%;
-    width: 460px;
-    height: 341px;
+    width: 28.75em;
+    height: 21.31em;
   }
 }
 
@@ -32,14 +32,20 @@
   display: inline-flex;
 }
 
+.intro__bars {
+  width: 31.43rem;
+  height: 32.68rem;
+  object-fit: cover;
+}
+
 .split {
-  display: inline-flex;
+  display: flex;
   flex: 1;
 }
 
 .split__block {
   flex: 1;
-  display: flex;
+  display:  inline-flex;
   &--left {
     align-items: center;
   }

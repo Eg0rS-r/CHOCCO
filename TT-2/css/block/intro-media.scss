@@ -1,8 +1,53 @@
 @media screen and (max-width: 768px) {
   .intro {
     padding-top: 1.5em;
+    background-position: 100% -3%;
+    &::before {
+      background: url(../img/intro/media/decor-media1.png);
+      top: 24%;
+      left: 21%;
+      width: 27.12em;
+      height: 16.56em;
+    }
+    &::after {
+      background: url(../img/intro/media/decor-media2.png);
+      top: 22%;
+      right: 24%;
+      width: 24.25em;
+      height: 17em;
+    }
+  }
+  .split {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+  .split__block, split__block--left, split__block--right {
+    flex: none;
+    justify-content: center;
+  }
+  .split__block--left {
+    flex: 1;
+    align-items: center;
+  }
+  .intro__text {
+    text-align: center;
+  }
+  .features{
+    width: 100%;
+    justify-content: center;
+  }
+  .features__item {
+    margin: 0;
+    margin-right: 3em;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
+  .intro__bars {
+    font-size: 10px;
+  }
 }
