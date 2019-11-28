@@ -424,7 +424,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 50px; }
+  margin-bottom: 45px; }
   .block-title--margin {
     margin-bottom: 10px; }
   .block-title--left {
@@ -495,14 +495,14 @@ a {
   text-align: center;
   margin-bottom: 3.12rem; }
 .text--card {
-  margin-bottom: 18px; }
+  margin-bottom: 1.12em; }
 
 .text__title {
   font-weight: bold;
   font-size: 60px;
   text-transform: uppercase;
   line-height: 60px;
-  margin-bottom: 10px; }
+  margin-bottom: 0.16em; }
   .text__title--card {
     text-transform: capitalize;
     font-size: 27px;
@@ -885,24 +885,26 @@ a {
   .text--center {
     margin-bottom: 1.25em; } }
 /*FEEDBACK*/
-.feedback::before {
-  content: "";
-  background: url(../img/feedback/decor-feedback1.png);
-  background-size: cover;
-  position: absolute;
-  top: 10%;
-  right: 1%;
-  width: 9.4rem;
-  height: 5.39rem; }
-.feedback::after {
-  content: "";
-  background: url(../img/feedback/decor-feedback2.png);
-  background-size: cover;
-  position: absolute;
-  top: 78%;
-  left: 0%;
-  width: 8.68rem;
-  height: 20.06rem; }
+.feedback {
+  padding-top: 3.5em; }
+  .feedback::before {
+    content: "";
+    background: url(../img/feedback/decor-feedback1.png);
+    background-size: cover;
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 9.4rem;
+    height: 5.39rem; }
+  .feedback::after {
+    content: "";
+    background: url(../img/feedback/decor-feedback2.png);
+    background-size: cover;
+    position: absolute;
+    top: 76%;
+    left: 0%;
+    width: 8.68rem;
+    height: 20.06rem; }
 
 .container--feedback {
   align-items: center; }
@@ -913,7 +915,8 @@ a {
   align-items: center;
   padding: 3.12em 0 2.18em 2.81em;
   position: relative;
-  margin-bottom: 1.43em; }
+  margin-bottom: 1.43em;
+  width: 100%; }
   .review::before {
     content: '';
     position: absolute;
@@ -977,28 +980,39 @@ a {
     width: 5.25em;
     height: 5.25em; }
     .review-list__item--active {
-      border: 0.5em solid #0F5A47; }
+      border: 0.5em solid #0f5a47; }
 
   .avatar--review {
-    margin-right: 0; }
+    margin-right: 0;
+    margin-bottom: 0.93em; }
+
+  .review__title {
+    margin-bottom: 0.87em; }
 
   .feedback::before {
-    top: 3%;
+    top: 2%;
     right: -2%; }
   .feedback::after {
-    top: 84%;
+    top: 82%;
     left: -2%; }
 
   .container--feedback {
     justify-content: space-evenly; } }
 @media screen and (max-width: 480px) {
+  .block-title {
+    font-size: 40px; }
+
   .avatar {
     width: 10.41rem;
     height: 10.41rem; }
 
   .review-list__item {
     width: 4.25em;
-    height: 4.25em; } }
+    height: 4.25em; }
+
+  .feedback::after {
+    top: 84%;
+    left: -5%; } }
 /*TEAM*/
 .team::before {
   content: "";

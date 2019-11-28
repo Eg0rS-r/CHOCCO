@@ -11,19 +11,23 @@
     width: 5.25em;
     height: 5.25em;
     &--active {
-      border: 0.5em solid #0F5A47;
+      border: 0.5em solid #0f5a47;
     }
   }
   .avatar--review {
     margin-right: 0;
+    margin-bottom: 0.93em;
+  }
+  .review__title {
+    margin-bottom: 0.87em;
   }
   .feedback {
     &::before {
-      top: 3%;
+      top: 2%;
       right: -2%;
     }
     &::after {
-      top: 84%;
+      top: 82%;
       left: -2%;
     }
   }
@@ -33,6 +37,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .block-title {
+    font-size: 40px;
+  }
   .avatar {
     width: 10.41rem;
     height: 10.41rem;
@@ -40,5 +47,11 @@
   .review-list__item {
     width: 4.25em;
     height: 4.25em;
+  }
+  .feedback {
+    &::after {
+      top: 84%;
+      left: -5%;
+    }
   }
 }
