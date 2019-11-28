@@ -69,7 +69,7 @@ $text-grey: #666666;
   padding: 0 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center
 }
 
 .cont-section {
@@ -141,29 +141,10 @@ $text-grey: #666666;
 
 /*TEAM*/
 
-.team {
-  &::before {
-    content: "";
-    background: url(../img/team/pattern-team.png);
-    position: absolute;
-    top: -31%;
-    right: 0;
-    width: 196px;
-    height: 578px;
-  }
-  &::after {
-    content: "";
-    background: url(../img/team/decor-team.png);
-    position: absolute;
-    top: 100%;
-    left: 3%;
-    transform: translateY(-50%);
-    width: 104px;
-    height: 114px;
-  }
-}
-
+@import "./block/team";
 @import "./block/team-list";
+@import "./block/team-media";
+
 
 /*ACCORDION*/
 

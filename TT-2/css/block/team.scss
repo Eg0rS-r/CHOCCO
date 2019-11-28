@@ -1,0 +1,25 @@
+.team {
+  &::before {
+    content: "";
+    background: url(../img/team/pattern-team.png);
+    position: absolute;
+    background-size: cover;
+    top: -31%;
+    right: 0;
+    width: 12.25rem;
+    height: 36.12rem;
+  }
+  &::after {
+    content: "";
+    background: url(../img/team/decor-team.png);
+    position: absolute;
+    background-size: cover;
+    top: 100%;
+    left: 3%;
+    transform: translateY(-50%);
+    width: 6.5rem;
+    height: 7.12rem;
+  }
+}
+
+

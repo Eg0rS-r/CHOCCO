@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+  .team {
+    &::before {
+    top: -17%;
+    right: -4%;
+    }
+    &::after {
+      top: 98%;
+      left: 4%;
+    }
+  }
+  .team__item {
+    width: 228px;
+  }
+  .container--team {
+    padding-top: 4.37em;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+}
