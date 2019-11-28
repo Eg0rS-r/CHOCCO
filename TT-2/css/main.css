@@ -834,7 +834,8 @@ a {
   padding-left: 2.12em;
   padding-right: 2.12em;
   position: relative;
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
   .card-list__item:last-child {
     padding-right: 0;
     margin-right: 0; }
@@ -909,7 +910,8 @@ a {
 
   .card-list__item {
     align-items: center;
-    margin-bottom: 1.75em; }
+    margin-bottom: 1.75em;
+    flex-direction: row; }
 
   .card-list {
     margin-top: 1.43em; } }
@@ -1043,25 +1045,29 @@ a {
     top: 84%;
     left: -5%; } }
 /*TEAM*/
-.team::before {
-  content: "";
-  background: url(../img/team/pattern-team.png);
-  position: absolute;
-  background-size: cover;
-  top: -31%;
-  right: 0;
-  width: 12.25rem;
-  height: 36.12rem; }
-.team::after {
-  content: "";
-  background: url(../img/team/decor-team.png);
-  position: absolute;
-  background-size: cover;
-  top: 100%;
-  left: 3%;
-  transform: translateY(-50%);
-  width: 6.5rem;
-  height: 7.12rem; }
+.team {
+  padding-top: 3.75em; }
+  .team::before {
+    content: "";
+    background: url(../img/team/pattern-team.png);
+    position: absolute;
+    background-size: cover;
+    top: -36%;
+    right: 0;
+    width: 12.25rem;
+    height: 36.12rem;
+    z-index: -1; }
+  .team::after {
+    content: "";
+    background: url(../img/team/decor-team.png);
+    z-index: 10;
+    position: absolute;
+    background-size: cover;
+    top: 98%;
+    left: 3%;
+    transform: translateY(-50%);
+    width: 6.5rem;
+    height: 7.12rem; }
 
 .team__list {
   display: inline-flex;
@@ -1111,20 +1117,45 @@ a {
   color: #323232; }
 
 @media screen and (max-width: 768px) {
-  .team::before {
-    top: -17%;
-    right: -4%; }
-  .team::after {
-    top: 98%;
-    left: 4%; }
+  .team {
+    padding-top: 3.62em; }
+    .team::before {
+      top: -19%;
+      right: -4%; }
+    .team::after {
+      top: 99%;
+      left: 4%; }
 
   .team__item {
-    width: 228px;
+    width: 14.25em;
     margin-bottom: 1.56em; }
 
   .container--team {
-    padding-top: 4.37em;
     justify-content: flex-start; } }
+@media screen and (max-width: 480px) {
+  .team {
+    padding-top: 4.68em; }
+    .team::before {
+      top: -20%;
+      right: -5%; }
+    .team::after {
+      top: 99%;
+      left: 2%; }
+
+  .team__list {
+    justify-content: space-evenly; }
+
+  .team__item {
+    width: 8.87em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+  .team__avatar {
+    height: 11.56em; }
+
+  .team__name {
+    width: max-content; } }
 /*ACCORDION*/
 .accordion {
   width: 100%;

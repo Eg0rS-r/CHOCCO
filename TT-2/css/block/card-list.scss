@@ -29,7 +29,7 @@ $circle-size: 7.81em;
   padding-right: 2.12em;
   position: relative;
   display: flex;
-
+  flex-direction: column;
   &:last-child {
     padding-right: 0;
     margin-right: 0;
