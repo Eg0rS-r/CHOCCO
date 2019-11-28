@@ -15,8 +15,35 @@
   .text--center {
     margin-bottom: 1.25em;
   }
+  .advant {
+    background-position: 0% 28%;
+    &::before {
+      top: 80%;
+      left: 0%;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
-  
+  .advant {
+    background: none;
+    align-items: flex-start;
+    padding-top: 3.12em;
+    &::before {
+      display: none;
+    }
+  }
+  .card-list__circle {
+    margin-right: 0.62em;
+  }
+  .text {
+    text-align: left;
+  }
+  .card-list__item {
+    align-items: center;
+    margin-bottom: 1.75em;  
+  }
+  .card-list {
+    margin-top: 1.43em;
+  }
 }

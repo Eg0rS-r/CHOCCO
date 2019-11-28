@@ -791,13 +791,15 @@ a {
     width: min-content; } }
 /*ADVANTAGES*/
 .advant {
-  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff; }
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  display: flex;
+  align-items: center; }
   .advant::before {
     content: "";
     background: url(../img/why-chocco/raspberries.png);
     position: absolute;
     background-size: cover;
-    top: 73%;
+    top: 68%;
     left: 0%;
     width: 10.06rem;
     height: 19.68rem; }
@@ -811,7 +813,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7.81em;
+  min-width: 7.81em;
   height: 7.81em;
   background: #f2f5f4;
   border-radius: 50%;
@@ -831,7 +833,8 @@ a {
   max-width: 18.75em;
   padding-left: 2.12em;
   padding-right: 2.12em;
-  position: relative; }
+  position: relative;
+  display: flex; }
   .card-list__item:last-child {
     padding-right: 0;
     margin-right: 0; }
@@ -883,7 +886,33 @@ a {
     margin-bottom: 1.25em; }
 
   .text--center {
-    margin-bottom: 1.25em; } }
+    margin-bottom: 1.25em; }
+
+  .advant {
+    background-position: 0% 28%; }
+    .advant::before {
+      top: 80%;
+      left: 0%; } }
+@media screen and (max-width: 480px) {
+  .advant {
+    background: none;
+    align-items: flex-start;
+    padding-top: 3.12em; }
+    .advant::before {
+      display: none; }
+
+  .card-list__circle {
+    margin-right: 0.62em; }
+
+  .text {
+    text-align: left; }
+
+  .card-list__item {
+    align-items: center;
+    margin-bottom: 1.75em; }
+
+  .card-list {
+    margin-top: 1.43em; } }
 /*FEEDBACK*/
 .feedback {
   padding-top: 3.5em; }
