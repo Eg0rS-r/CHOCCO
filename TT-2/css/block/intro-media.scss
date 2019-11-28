@@ -1,4 +1,7 @@
 @media screen and (max-width: 768px) {
+  .progress-bar {
+    display: none;
+  }
   .intro {
     background-position: 100% -3%;
     &::before {
@@ -42,8 +45,7 @@
     justify-content: center;
   }
   .features__item {
-    margin: 0;
-    margin-right: 3em;
+    margin: 0 auto;
     &:last-child {
       margin-right: 0;
     }
@@ -56,14 +58,17 @@
 @media screen and (max-width: 480px) {
   .intro__bars {
     position: absolute;
-    top: -80px;
-    right: 70px;
+    top: 2%;
+    right: 18%;
     max-width: 25.18rem;
     max-height: 26.18rem;
   }
   .intro__title {
     font-size: 46px;
     line-height: unset;
+  }
+  .split__block--right {
+    position: unset;
   }
   .intro {
     background-position: 100% 0%;
@@ -81,5 +86,13 @@
       width: 19.06em;
       height: 13.37em;
     }
+  }
+  .intro__desc {
+    font-size: 18px;
+  }
+  .features__item {
+    maring: 0;
+    margin-right: auto;
+    width: min-content;
   }
 }

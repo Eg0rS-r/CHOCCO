@@ -202,4 +202,10 @@ $text-grey: #666666;
     rgba(#000, 0.6) 100%
     ),
     url(../img/accordion/item3.jpg);
-}
+};
+
+
+/*FOOTER*/
+
+@import "./block/footer";
+@import "./block/footer-media.scss"

@@ -1,0 +1,19 @@
+@media screen and (max-width: 480px) {
+  .container--footer {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .address {
+    align-items: center;
+    margin-bottom: 0.93em;
+  }
+  .contact::before {
+    display: inline-block
+  }
+  .contact--footer {
+    margin-top: 0.93em;
+    display: block;
+  }
+}
