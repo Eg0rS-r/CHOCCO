@@ -147,64 +147,7 @@ $text-grey: #666666;
 /*ACCORDION*/
 
 
-
-.accordion {
-  width: 100%;
-  color: $white;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(#000, 0.1) 0%, 
-    rgba(#000, 0.1) 100%
-    ),
-    url(../img/accordion/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; 
-  position: relative;
-}
-
-.accord-menu {
-  display: inline-flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  justify-content: flex-end;
-}
-
-.accord-menu__item {
-  width: 6.25em;
-  align-items: stretch;
-  background-position: center;
-  background-size: cover;
-}
-
-.accord-menu__item--1 {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(#000, 0.6) 0%, 
-    rgba(#000, 0.6) 100%
-    ),
-    url(../img/accordion/item1.jpg);
-}
-
-.accord-menu__item--2 {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(#000, 0.6) 0%, 
-    rgba(#000, 0.6) 100%
-    ),
-    url(../img/accordion/item2.jpg);
-}
-
-.accord-menu__item--3 {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(#000, 0.6) 0%, 
-    rgba(#000, 0.6) 100%
-    ),
-    url(../img/accordion/item3.jpg);
-};
+@import "./block/accordion";
 
 
 /*FOOTER*/

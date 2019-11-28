@@ -1175,19 +1175,31 @@ a {
   justify-content: flex-end; }
 
 .accord-menu__item {
+  position: relative;
   width: 6.25em;
   align-items: stretch;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .accord-menu__item--1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../img/accordion/item1.jpg); }
 
-.accord-menu__item--2 {
+.accord-menu__item--3 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../img/accordion/item2.jpg); }
 
-.accord-menu__item--3 {
+.accord-menu__item--2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../img/accordion/item3.jpg); }
+
+.accord__title {
+  position: absolute;
+  width: 100vh;
+  padding-left: 30px;
+  transform: rotate(-90deg);
+  font-size: 48px;
+  font-weight: 500; }
 
 /*FOOTER*/
 .footer {
