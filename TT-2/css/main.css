@@ -410,12 +410,10 @@ a {
 .container {
   width: 100%;
   max-width: 960px;
-  height: inherit;
   margin: 0 auto;
   padding: 0 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  flex-direction: column; }
 
 .cont-section {
   height: 100vh;
@@ -534,7 +532,8 @@ a {
 .header {
   display: inline-flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 30px; }
 
 .menu {
   display: flex;
@@ -613,38 +612,45 @@ a {
   background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
   padding-bottom: 2.81em;
-  padding-top: 0.62em; }
+  padding-top: 1.5em;
+  flex-direction: column;
+  align-items: stretch; }
   .intro::before {
     content: "";
     background: url(../img/intro/decor-intro2.png);
     z-index: 10;
+    background-size: cover;
     position: absolute;
     top: 91%;
     left: 3%;
     width: 3.68em;
     height: 7em; }
   .intro::after {
+    background-size: cover;
     z-index: 10;
     content: "";
     background: url(../img/intro/decor-intro1.png);
     position: absolute;
-    top: 61%;
+    top: 55%;
     right: 1%;
     width: 28.75em;
     height: 21.31em; }
 
 .container--intro {
-  height: auto;
+  height: 100%;
   display: inline-flex; }
 
 .intro__bars {
-  width: 31.43rem;
-  height: 32.68rem;
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  max-width: 31.43rem;
+  max-height: 32.68rem;
   object-fit: cover; }
 
 .split {
-  display: flex;
-  flex: 1; }
+  flex: 1;
+  display: flex; }
 
 .split__block {
   flex: 1;
@@ -652,6 +658,7 @@ a {
   .split__block--left {
     align-items: center; }
   .split__block--right {
+    position: relative;
     align-items: flex-start;
     justify-content: flex-end; }
 
@@ -663,6 +670,7 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   font-size: 60px;
+  line-height: 67px;
   margin-bottom: 0.16em; }
 
 .intro__desc {
@@ -672,6 +680,7 @@ a {
 .features {
   display: flex;
   width: 30em;
+  justify-self: flex-end;
   justify-content: stretch; }
 
 .features__item {
@@ -695,16 +704,17 @@ a {
 
 @media screen and (max-width: 768px) {
   .intro {
-    padding-top: 1.5em;
     background-position: 100% -3%; }
     .intro::before {
       background: url(../img/intro/media/decor-media1.png);
+      background-size: cover;
       top: 24%;
       left: 21%;
       width: 27.12em;
       height: 16.56em; }
     .intro::after {
       background: url(../img/intro/media/decor-media2.png);
+      background-size: cover;
       top: 22%;
       right: 24%;
       width: 24.25em;
@@ -715,18 +725,21 @@ a {
     flex-direction: column-reverse;
     justify-content: flex-end; }
 
-  .split__block, split__block--left, split__block--right {
-    flex: none;
+  .split__block,
+  split__block--left,
+  split__block--right {
+    flex: unset;
     justify-content: center; }
 
   .split__block--left {
-    flex: 1;
-    align-items: center; }
+    align-items: flex-end;
+    flex: 1; }
 
   .intro__text {
     text-align: center; }
 
   .features {
+    margin-top: 40px;
     width: 100%;
     justify-content: center; }
 
@@ -734,10 +747,36 @@ a {
     margin: 0;
     margin-right: 3em; }
     .features__item:last-child {
-      margin-right: 0; } }
+      margin-right: 0; }
+
+  .intro__bars {
+    position: unset; } }
 @media screen and (max-width: 480px) {
   .intro__bars {
-    font-size: 10px; } }
+    position: absolute;
+    top: -80px;
+    right: 70px;
+    max-width: 25.18rem;
+    max-height: 26.18rem; }
+
+  .intro__title {
+    font-size: 46px;
+    line-height: unset; }
+
+  .intro {
+    background-position: 100% 0%;
+    background-size: 19.5em; }
+    .intro::before {
+      top: 20%;
+      left: 17%;
+      width: 21.31em;
+      height: 13em; }
+    .intro::after {
+      background-size: cover;
+      top: 19%;
+      right: 15%;
+      width: 19.06em;
+      height: 13.37em; } }
 /*ADVANTAGES*/
 .advant {
   background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff; }
@@ -1025,7 +1064,8 @@ a {
     left: 4%; }
 
   .team__item {
-    width: 228px; }
+    width: 228px;
+    margin-bottom: 1.56em; }
 
   .container--team {
     padding-top: 4.37em;

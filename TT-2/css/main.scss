@@ -64,12 +64,10 @@ $text-grey: #666666;
 .container {
   width: 100%;
   max-width: 960px;
-  height: inherit;
   margin: 0 auto;
   padding: 0 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center
 }
 
 .cont-section {

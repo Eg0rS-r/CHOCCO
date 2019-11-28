@@ -4,11 +4,15 @@
   background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
   padding-bottom: 2.81em;
-  padding-top: 0.62em;
+  padding-top: 1.5em;
+  flex-direction: column;
+  align-items: stretch;
+
   &::before {
     content: "";
     background: url(../img/intro/decor-intro2.png);
     z-index: 10;
+    background-size: cover;
     position: absolute;
     top: 91%;
     left: 3%;
@@ -16,11 +20,12 @@
     height: 7em;
   }
   &::after {
+    background-size: cover;
     z-index: 10;
     content: "";
     background: url(../img/intro/decor-intro1.png);
     position: absolute;
-    top: 61%;
+    top: 55%;
     right: 1%;
     width: 28.75em;
     height: 21.31em;
@@ -28,28 +33,32 @@
 }
 
 .container--intro {
-  height: auto;
+  height: 100%;
   display: inline-flex;
 }
 
 .intro__bars {
-  width: 31.43rem;
-  height: 32.68rem;
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  max-width: 31.43rem;
+  max-height: 32.68rem;
   object-fit: cover;
 }
 
 .split {
-  display: flex;
   flex: 1;
+  display: flex;
 }
 
 .split__block {
   flex: 1;
-  display:  inline-flex;
+  display: inline-flex;
   &--left {
     align-items: center;
   }
   &--right {
+    position: relative;
     align-items: flex-start;
     justify-content: flex-end;
   }

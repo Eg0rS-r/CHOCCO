@@ -1,9 +1,9 @@
 @media screen and (max-width: 768px) {
   .intro {
-    padding-top: 1.5em;
     background-position: 100% -3%;
     &::before {
       background: url(../img/intro/media/decor-media1.png);
+      background-size: cover;
       top: 24%;
       left: 21%;
       width: 27.12em;
@@ -11,6 +11,7 @@
     }
     &::after {
       background: url(../img/intro/media/decor-media2.png);
+      background-size: cover;
       top: 22%;
       right: 24%;
       width: 24.25em;
@@ -22,18 +23,21 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
   }
-  .split__block, split__block--left, split__block--right {
-    flex: none;
+  .split__block,
+  split__block--left,
+  split__block--right {
+    flex: unset;
     justify-content: center;
   }
   .split__block--left {
+    align-items: flex-end;
     flex: 1;
-    align-items: center;
   }
   .intro__text {
     text-align: center;
   }
-  .features{
+  .features {
+    margin-top: 40px;
     width: 100%;
     justify-content: center;
   }
@@ -44,10 +48,38 @@
       margin-right: 0;
     }
   }
+  .intro__bars {
+    position: unset;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .intro__bars {
-    font-size: 10px;
+    position: absolute;
+    top: -80px;
+    right: 70px;
+    max-width: 25.18rem;
+    max-height: 26.18rem;
+  }
+  .intro__title {
+    font-size: 46px;
+    line-height: unset;
+  }
+  .intro {
+    background-position: 100% 0%;
+    background-size: 19.5em;
+    &::before {
+      top: 20%;
+      left: 17%;
+      width: 21.31em;
+      height: 13em;
+    }
+    &::after {
+      background-size: cover;
+      top: 19%;
+      right: 15%;
+      width: 19.06em;
+      height: 13.37em;
+    }
   }
 }
