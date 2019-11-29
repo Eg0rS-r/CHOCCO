@@ -1,5 +1,6 @@
 .btn {
   display: inline-block;
+  border: none;
   color: $white;
   background: $green;
   font-size: 19px;
@@ -16,4 +17,13 @@
 .btn--intro {
   color: $green;
   background: $white;
+}
+
+.btn--clear {
+  background: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: $green;
+  box-shadow: none;
+  text-transform: none;
 }

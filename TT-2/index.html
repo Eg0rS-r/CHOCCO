@@ -263,23 +263,15 @@
 
     <section class="cont-section accordion">
       <div class="container container--acord">
-
-        <!-- <ul class="accord-menu acord-menu--fixed">
-          <li class="accord-menu__item accord-menu__item--1">
-            <div class="accord__title">Батончики с молоком</div>
-          </li>
-          <li class="accord-menu__item accord-menu__item--2">
-            <div class="accord__title">С мёдом и фруктами</div>
-          </li>
-          <li class="accord-menu__item accord-menu__item--3">
-            <div class="accord__title">Дикие ягоды</div>
-          </li>
-        </ul> -->
-
         <div class="block-title block-title--left">Меню</div>
+        <ul>
+          
+        </ul>
         <ul class="accord-menu">
           <li class="accord-menu__item">
-            <div class="accord__title accord__title--1">Батончики с молоком</div>
+            <div class="accord__title accord-menu__item--1">
+              <p class="title-text">Батончики с молоком</p>
+            </div>
             <div class="accord__cont accord__cont--active">
               <p class="accord__text">
                 Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.
@@ -291,8 +283,10 @@
             </div>
           </li>
 
-          <li class="accord-menu__item">
-            <div class="accord__title accord__title--1">Батончики с молоком</div>
+          <li class="accord-menu__item ">
+            <div class="accord__title accord-menu__item--2">
+              <p class="title-text">С мёдом и фруктами</p>
+            </div>
             <div class="accord__cont">
               <p class="accord__text">
                 Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.
@@ -304,7 +298,9 @@
             </div>
           </li>
           <li class="accord-menu__item">
-            <div class="accord__title accord__title--1">Батончики с молоком</div>
+            <div class="accord__title accord-menu__item--3">
+              <p class="title-text">Дикие ягоды</p>
+            </div>
             <div class="accord__cont">
               <p class="accord__text">
                 Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.
@@ -316,8 +312,91 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
 
-
+    <section class="cont-section delivery">
+      <div class="container container--form">
+        <div class="block-title">Закажите доставку</div>
+        <form class="form-content" action="">
+          <div class="form__col">
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__subtitle">Имя</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__subtitle">Телефон</span>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__subtitle">Улица</span>
+                <input class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__subtitle">Дом</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__subtitle">Корпус</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__subtitle">Квартира</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__subtitle">Этаж</span>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+          </div>
+          <div class="form__col">
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__subtitle">Комментарий</span>
+                <textarea type="text" class="form__textarea form__input"></textarea>
+              </label>
+            </div>
+            <div class="form__row form__row--radio">
+              <div class="form__radio">
+                <div class="form__radio-wrapp">
+                  <label class="form__radio-label">
+                    <input type="radio" class="form__radio-input" name="mony">
+                    <span class="radio__styled"></span>
+                    <span class="form__subtitle">Потребуется сдача</span>
+                  </label>
+                  <label class="form__radio-label">
+                    <input type="radio" class="form__radio-input" name="mony">
+                    <span class="radio__styled"></span>
+                    <span class="form__subtitle">Оплата по карте</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row--btn">
+              <div class="form__check">
+                <label class="form__check-label">
+                  <input class="form__check-input" type="checkbox">
+                  <span class="check__styled"></span>
+                  <span class="form__subtitle">Не перезванивать</span>
+                </label>
+              </div>
+            </div>
+            <div class="form__row ">
+              <button class="btn" type="submit">
+                Отправить
+              </button>
+              <button class="btn btn--clear" type="submit">
+                Очистить
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
 
