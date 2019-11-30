@@ -28,6 +28,7 @@
 .accord-menu__item {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .accord__title {
@@ -43,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 25px;
+  padding-top: 0.52em;
   font-size: 48px;
 }
 
@@ -75,10 +76,10 @@
 };
 
 .accord__cont {
-  padding: 25px;
+  padding: 1.56em;
   opacity: 0;
-  width: 530px;
-  max-width: 530px;
+  width: 33.12em;
+  max-width: 33.12em;
   display: none;
   flex-direction: row;
   background: rgba(47, 50, 52, 0.93);
@@ -89,13 +90,13 @@
 }
 
 .accord__text {
-  margin-top: 20px;
-  margin-right: 50px;
-  line-height: 24px;
+  margin-top: 1.25em;
+  margin-right: 3.12em;
+  line-height: 1.5em;
 }
 
 .accord__close {
-  width: 18px;
-  height: 18px;
+  width: 1.12em;
+  height: 1.12em;
   object-fit: cover;
 }

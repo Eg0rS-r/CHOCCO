@@ -12,21 +12,21 @@
 }
 
 .form__col {
-  margin-right: 20px;
+  margin-right: 1.11em;
   width: 50%;
 }
 
 .form__row {
   display: flex;
-  margin-bottom: 15px
+  margin-bottom: 0.83em;
 }
 
 .form__label{
   display: flex;
   flex-flow: column;
-  min-width: 100px;
+  min-width: 5.55em;
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.11em;
   &:last-child {
     margin-right: 0;
   }
@@ -34,14 +34,14 @@
 
 .form__input {
   margin-top: 5px;
-  padding: 20px 0;
+  padding: 1.11em 0;
   &:focus{
     outline: #DDE3BD auto 3px;
   }
 }
 
 .form__textarea {
-  height: 195px;
+  height: 10.83em;
 }
 
 .form__row--btn {
@@ -52,16 +52,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 1.38em;
+  width: 1.38em;
   background-color: #FFF;
 }
 
 .check__styled:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 0.5em;
+  top: 2.77em;
+  width: 2.77em;
+  height: 0.55em;
   border: solid $green;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
@@ -70,8 +70,8 @@
 .form__check-label {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 1.94em;
+  margin-bottom: 0.66em;
   cursor: pointer;
 }
 
@@ -94,11 +94,11 @@
 }
 
 .form__row--radio {
-  margin-bottom: 10px;
+  margin-bottom: 0.55em;
 }
 
 .form__radio-label{
-  margin-right: 20px;
+  margin-right: 1.11em;
   vertical-align: middle;
   &:last-child {
     margin-right: 0;
@@ -113,9 +113,9 @@
   vertical-align: middle;
   position: relative;
   display: inline-block;
-  width: 25px;
-  height: 25px;
-  margin-right: 3px;
+  width: 1.38em;
+  height: 1.38em;
+  margin-right: 0.16em;
   border-radius: 50%;
   background: #FFF; 
   transition-duration: .2s;
@@ -127,8 +127,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 14px;
-  width: 14px;
+  height: 0.77em;
+  width: 0.77em;
   border-radius: 50%;
   background: $green;
   opacity: 0;
