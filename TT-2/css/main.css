@@ -603,7 +603,7 @@ a {
     height: 0.5em; }
 
 @media screen and (max-width: 768px) {
-  .contact {
+  .header .contact {
     display: none; }
 
   .menu {
