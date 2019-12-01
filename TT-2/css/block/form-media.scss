@@ -1,4 +1,12 @@
 @media screen and (max-width: 768px) {
+  .delivery {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
   .container--form {
     align-items: center;
   }

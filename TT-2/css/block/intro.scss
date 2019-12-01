@@ -9,14 +9,14 @@
   align-items: stretch;
 
   &::before {
-    background: url(../img/intro/decor-intro2.png);
+    background-image: url(../img/intro/decor-intro2.png);
     top: 91%;
     left: 3%;
     width: 3.68em;
     height: 7em;
   }
   &::after {
-    background: url(../img/intro/decor-intro1.png);
+    background-image: url(../img/intro/decor-intro1.png);
     top: 55%;
     right: 1%;
     width: 28.75em;
