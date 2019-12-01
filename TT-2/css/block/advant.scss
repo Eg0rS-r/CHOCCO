@@ -3,10 +3,7 @@
   display: flex;
   align-items: center;
   &::before {
-    content: "";
     background: url(../img/why-chocco/raspberries.png);
-    position: absolute;
-    background-size: cover;
     top: 68%;
     left: 0%;
     width: 10.06rem;

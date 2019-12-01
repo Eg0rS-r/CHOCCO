@@ -440,6 +440,17 @@ a {
   width: 50px;
   font-weight: 500; }
 
+.decor-elem::before {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  z-index: 100; }
+.decor-elem::after {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  z-index: 100; }
+
 .btn {
   display: inline-block;
   border: none;
@@ -625,21 +636,13 @@ a {
   flex-direction: column;
   align-items: stretch; }
   .intro::before {
-    content: "";
     background: url(../img/intro/decor-intro2.png);
-    z-index: 10;
-    background-size: cover;
-    position: absolute;
     top: 91%;
     left: 3%;
     width: 3.68em;
     height: 7em; }
   .intro::after {
-    background-size: cover;
-    z-index: 10;
-    content: "";
     background: url(../img/intro/decor-intro1.png);
-    position: absolute;
     top: 55%;
     right: 1%;
     width: 28.75em;
@@ -804,10 +807,7 @@ a {
   display: flex;
   align-items: center; }
   .advant::before {
-    content: "";
     background: url(../img/why-chocco/raspberries.png);
-    position: absolute;
-    background-size: cover;
     top: 68%;
     left: 0%;
     width: 10.06rem;
@@ -928,19 +928,13 @@ a {
 .feedback {
   padding-top: 3.5em; }
   .feedback::before {
-    content: "";
     background: url(../img/feedback/decor-feedback1.png);
-    background-size: cover;
-    position: absolute;
     top: 5%;
     right: 1%;
     width: 9.4rem;
     height: 5.39rem; }
   .feedback::after {
-    content: "";
     background: url(../img/feedback/decor-feedback2.png);
-    background-size: cover;
-    position: absolute;
     top: 76%;
     left: 0%;
     width: 8.68rem;
@@ -1057,21 +1051,13 @@ a {
 .team {
   padding-top: 3.75em; }
   .team::before {
-    content: "";
     background: url(../img/team/pattern-team.png);
-    position: absolute;
-    background-size: cover;
     top: -36%;
     right: 0;
     width: 12.25rem;
-    height: 36.12rem;
-    z-index: -1; }
+    height: 36.12rem; }
   .team::after {
-    content: "";
     background: url(../img/team/decor-team.png);
-    z-index: 10;
-    position: absolute;
-    background-size: cover;
     top: 98%;
     left: 3%;
     transform: translateY(-50%);
@@ -1085,6 +1071,7 @@ a {
   margin-right: -1.25em; }
 
 .team__item {
+  z-index: 200;
   width: 13.75em;
   margin-right: 1.25em; }
 
@@ -1262,10 +1249,24 @@ a {
 /*FORM*/
 .delivery {
   background-image: url(../img/delivery/pattern.jpg);
+  background-size: cover;
   color: #0f5a47;
   font-size: 18px;
   display: flex;
   align-items: center; }
+  .delivery::before {
+    background: url(../img/delivery/berri.png);
+    top: 80%;
+    left: 2%;
+    width: 48px;
+    height: 48px; }
+  .delivery::after {
+    background: url(../img/delivery/leave.png);
+    top: 72%;
+    right: 1%;
+    transform: translateY(-50%);
+    width: 135px;
+    height: 188px; }
 
 .form-content {
   width: 100%;

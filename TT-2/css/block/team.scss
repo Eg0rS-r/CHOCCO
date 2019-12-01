@@ -1,22 +1,14 @@
 .team {
   padding-top: 3.75em;
   &::before {
-    content: "";
     background: url(../img/team/pattern-team.png);
-    position: absolute;
-    background-size: cover;
     top: -36%;
     right: 0;
     width: 12.25rem;
     height: 36.12rem;
-    z-index: -1;
   }
   &::after {
-    content: "";
     background: url(../img/team/decor-team.png);
-    z-index: 10;
-    position: absolute;
-    background-size: cover;
     top: 98%;
     left: 3%;
     transform: translateY(-50%);
