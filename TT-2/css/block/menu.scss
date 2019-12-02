@@ -7,7 +7,9 @@
   width: 1.5em;
   height: 0.25em;
   background: #FFF;
-  position: relative;
+  position: fixed;
+  right: 1.5em;
+  z-index: 300;
   border-radius: 2px;
   &::after, &::before {
     content: '';

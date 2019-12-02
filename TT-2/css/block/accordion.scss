@@ -11,9 +11,10 @@
   background-size: cover; 
 }
 
-.container--acord {
-  display: flex;
-  flex-direction: row;
+.block-title--accord {
+  position: absolute;
+  left: 7%;
+  top: 13%;
 }
 
 .accord-menu {
@@ -33,7 +34,9 @@
 
 .accord__title {
   height: 100vh;
+  color: #FFF;
   background-position: center;
+  background-size: cover;
 }
 
 .title-text {
@@ -77,9 +80,10 @@
 
 .accord__cont {
   padding: 1.56em;
+  padding-top: 2.81em;
+  padding-right: 5em;
   opacity: 0;
-  width: 33.12em;
-  max-width: 33.12em;
+  width: 530px;
   display: none;
   flex-direction: row;
   background: rgba(47, 50, 52, 0.93);
@@ -87,6 +91,7 @@
     display: flex;
     opacity: 1;
   }
+  line-height: 1.5em;
 }
 
 .accord__text {
@@ -99,4 +104,7 @@
   width: 1.12em;
   height: 1.12em;
   object-fit: cover;
+  position: absolute;
+  right: 3%;
+  top: 3%;
 }

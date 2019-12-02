@@ -30,11 +30,17 @@
 .form__col {
   margin-right: 1.11em;
   width: 50%;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .form__row {
   display: flex;
   margin-bottom: 0.83em;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__label{
@@ -51,12 +57,14 @@
 .form__input {
   margin-top: 5px;
   padding: 1.11em 0;
+  padding-left: 0.62em;
   &:focus{
     outline: #DDE3BD auto 3px;
   }
 }
 
 .form__textarea {
+  resize: none;
   height: 10.83em;
 }
 
@@ -74,10 +82,11 @@
 }
 
 .check__styled:after {
-  left: 0.5em;
-  top: 2.77em;
-  width: 2.77em;
-  height: 0.55em;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  width: 5px;
+  height: 9px;
   border: solid $green;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
