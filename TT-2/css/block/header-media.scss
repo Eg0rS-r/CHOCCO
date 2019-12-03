@@ -3,7 +3,32 @@
     display: none;
   }
   .menu {
-    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #303436;
+    top: 0;
+    left: 0;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
+  .cross--menu {
+    display: block;
+  }
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__item {
+    font-size: 36px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   .container {
     padding: 0 1.5em;

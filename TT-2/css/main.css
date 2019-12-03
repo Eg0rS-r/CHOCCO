@@ -451,6 +451,15 @@ a {
   background-size: cover;
   z-index: 100; }
 
+.cross {
+  width: 1.12em;
+  height: 1.12em;
+  background-size: cover;
+  position: absolute;
+  right: 4%;
+  top: 3%;
+  background-image: url(../img/cross.png); }
+
 .btn {
   display: inline-block;
   border: none;
@@ -560,14 +569,16 @@ a {
   align-items: center;
   justify-content: center; }
 
+.cross--menu {
+  display: none; }
+
 .menu-icon {
-  display: none;
   width: 1.5em;
   height: 0.25em;
   background: #FFF;
   position: fixed;
   right: 1.5em;
-  z-index: 300;
+  z-index: 1000;
   border-radius: 2px; }
   .menu-icon::after, .menu-icon::before {
     content: '';
@@ -583,6 +594,15 @@ a {
     bottom: -0.31em;
     top: auto;
     transform: translateY(50%); }
+
+.menu-icon--cross {
+  display: none;
+  top: 4%;
+  background: transparent; }
+  .menu-icon--cross::after, .menu-icon--cross::before {
+    transform: translateY(125%) rotate(45deg); }
+  .menu-icon--cross::before {
+    transform: translateY(-125%) rotate(-45deg); }
 
 .menu__list {
   flex: 1;
@@ -620,7 +640,31 @@ a {
     display: none; }
 
   .menu {
-    display: none; }
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #303436;
+    top: 0;
+    left: 0;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity .3s linear; }
+
+  .cross--menu {
+    display: block; }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
+  .menu__item {
+    font-size: 36px;
+    margin-right: 0;
+    margin-bottom: 40px; }
+    .menu__item:last-child {
+      margin-bottom: 0; }
 
   .container {
     padding: 0 1.5em; }
@@ -1230,14 +1274,6 @@ a {
   margin-top: 1.25em;
   margin-right: 3.12em;
   line-height: 1.5em; }
-
-.accord__close {
-  width: 1.12em;
-  height: 1.12em;
-  object-fit: cover;
-  position: absolute;
-  right: 3%;
-  top: 3%; }
 
 @media screen and (max-width: 768px) {
   .accord__cont {

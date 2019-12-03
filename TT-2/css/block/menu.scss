@@ -2,14 +2,17 @@
   @include center-flex;
 }
 
-.menu-icon {
+.cross--menu {
   display: none;
+}
+
+.menu-icon {
   width: 1.5em;
   height: 0.25em;
   background: #FFF;
   position: fixed;
   right: 1.5em;
-  z-index: 300;
+  z-index: 1000;
   border-radius: 2px;
   &::after, &::before {
     content: '';
@@ -26,6 +29,18 @@
     bottom: -0.31em;
     top: auto;
     transform: translateY(50%);
+  }
+}
+
+.menu-icon--cross {
+  display: none;
+  top: 4%;
+  background: transparent;
+  &::after, &::before {
+    transform: translateY(125%) rotate(45deg);
+  }
+  &::before {
+    transform: translateY(-125%) rotate(-45deg);
   }
 }
 
