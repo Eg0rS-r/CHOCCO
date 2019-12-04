@@ -35,6 +35,7 @@
   }
   .card-list__circle {
     margin-right: 0.62em;
+    margin-bottom: 0;
   }
   .text {
     text-align: left;
@@ -43,8 +44,11 @@
     align-items: center;
     margin-bottom: 1.75em;  
     flex-direction: row;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-  .card-list {
-    margin-top: 1.43em;
+  .text--advant {
+    margin-bottom: 4em;
   }
 }

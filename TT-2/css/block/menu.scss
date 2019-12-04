@@ -7,11 +7,13 @@
 }
 
 .menu-icon {
+  display: none;
   width: 1.5em;
   height: 0.25em;
   background: #FFF;
   position: fixed;
   right: 1.5em;
+  top: 5%;
   z-index: 1000;
   border-radius: 2px;
   &::after, &::before {
@@ -34,7 +36,8 @@
 
 .menu-icon--cross {
   display: none;
-  top: 4%;
+  right: 1.5em;
+  top: 5%;
   background: transparent;
   &::after, &::before {
     transform: translateY(125%) rotate(45deg);
