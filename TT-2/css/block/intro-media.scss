@@ -11,11 +11,13 @@
       left: 21%;
       width: 27.12em;
       height: 16.56em;
+      z-index: 0;
     }
     &::after {
       background: url(../img/intro/media/decor-media2.png);
       background-size: cover;
       top: 22%;
+      z-index: 0;
       right: 24%;
       width: 24.25em;
       height: 17em;
