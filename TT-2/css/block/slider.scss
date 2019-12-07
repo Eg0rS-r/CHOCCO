@@ -124,10 +124,14 @@
   color: #FFF;
   width: 6.42em;
   height: 6.42em;
-  background-color: #61C3D8;
+  background-color: #61C4D9;
   border-radius: 3px;
   align-self: flex-start;
   position: relative;
+  transition-duration: .4s;
+  &:hover {
+    background-color: #00ACCF;
+  }
 }
 
 .comp__icon {
