@@ -557,8 +557,10 @@
     </section>
 
 
-    
-    <a class="menu-icon"></a>
+
+    <a class="menu-link">
+      <div class="menu-icon"></div>
+    </a>
 
 
     <!-- PROGRESS BAR -->
@@ -598,9 +600,30 @@
 
 <script>
 
+  const menu_link = document.querySelector('.menu-link')
   const menu_icon = document.querySelector('.menu-icon')
   const menu_cross = document.querySelector('.menu-icon--cross')
   const menu = document.querySelector('.menu')
+
+  function menu__full(event) {
+    event.preventDefault();
+
+    menu_icon.classList.toggle('menu-icon--cross')
+    menu.classList.toggle('menu--full')
+  }
+
+  menu_link.addEventListener('click', menu__full);
+
+
+  const item = document.getElementsByClassName("menu__link")
+
+  const menu_item = document.querySelectorAll('.menu__link');
+
+  Array.prototype.forEach.call(item, function (link) {
+    link.addEventListener('click', menu__full);
+  });
+
+
 
   const comp__clk = document.querySelector('.comp__clk')
   const comp = document.querySelector('.comp__list')
@@ -609,22 +632,12 @@
     event.preventDefault();
 
     let width = document.documentElement.clientWidth;
-    if (width>769) {
+    if (width > 769) {
       comp.classList.toggle('comp__list--acitve-right')
-    } 
+    }
 
     comp.classList.toggle('comp__list--active')
   });
-
-
-  menu_icon.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    menu_icon.classList.toggle('menu-icon--cross')
-    menu.classList.toggle('menu--full')
-  });
-
-
 
 </script>
 
