@@ -156,13 +156,24 @@
 
 .comp__list {
   position: absolute;
-  left: 100%;
+  transition: opacity .2s linear;
   top: 0;
+  opacity: 0;
   padding: 1.85em;
   background-color: rgba(255, 255, 255, .98);
   border-radius: 3px;
   min-width: 19.28em;
   left: -9999px;
+  z-index: 1000;
+  &--active {
+    opacity: 1;
+    right: 100%;
+    left: unset; 
+  }
+  &--acitve-right {
+    right: unset;
+    left: 100%;
+  }
 }
 
 .comp__item {

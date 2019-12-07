@@ -9,10 +9,13 @@
     z-index: 1000;
     background-color: #303436;
     top: 0;
-    left: 0;
     left: -9999px;
     opacity: 0;
     transition: opacity .3s linear;
+    &--full {
+      left: 0%;
+      opacity: 1;
+    }
   }
   .cross--menu {
     display: block;

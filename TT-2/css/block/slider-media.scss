@@ -1,9 +1,9 @@
 @media screen and (max-width: 768px) {
   .slider-block {
-    &::before, &::after {
+    &::before,
+    &::after {
       display: none;
     }
-   
   }
   .slider__item {
     flex-direction: column;
@@ -13,12 +13,6 @@
     position: absolute;
     top: 24px;
     right: 24px;
-  }
-  .comp__list {
-    left: unset;
-    right: 100%;
-    right: unset;
-    left: -9999px;
   }
   .slider-col {
     padding-left: 0;

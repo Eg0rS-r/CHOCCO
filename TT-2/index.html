@@ -18,7 +18,6 @@
         <header class="header">
           <a class="logo" href="#">CHO<br>CCO</a>
           <nav class="menu">
-            <a class="menu-icon menu-icon--cross"></a>
             <ul class="menu__list">
               <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Батончики</a></li>
@@ -559,7 +558,7 @@
 
 
     
-    <a class="menu-icon menu-icon--open"></a>
+    <a class="menu-icon"></a>
 
 
     <!-- PROGRESS BAR -->
@@ -599,32 +598,33 @@
 
 <script>
 
-  const menu_icon = document.querySelector('.menu-icon--open')
+  const menu_icon = document.querySelector('.menu-icon')
   const menu_cross = document.querySelector('.menu-icon--cross')
   const menu = document.querySelector('.menu')
+
+  const comp__clk = document.querySelector('.comp__clk')
+  const comp = document.querySelector('.comp__list')
+
+  comp__clk.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    let width = document.documentElement.clientWidth;
+    if (width>769) {
+      comp.classList.toggle('comp__list--acitve-right')
+    } 
+
+    comp.classList.toggle('comp__list--active')
+  });
 
 
   menu_icon.addEventListener('click', function (event) {
     event.preventDefault();
 
-    menu_cross.style.display = "block"
-    menu_icon.style.display = "none"
-
-    console.log('menu')
-    menu.style.left = 0 + 'px';
-    menu.style.opacity = 1;
+    menu_icon.classList.toggle('menu-icon--cross')
+    menu.classList.toggle('menu--full')
   });
 
-  menu_cross.addEventListener('click', function (event) {
-    event.preventDefault();
 
-    console.log('cross')
-    menu_cross.style.display = 'none';
-    menu_icon.style.display = 'block'
-
-    menu.style.opacity = 0;
-    menu.style.left = -9999 + 'px';
-  });
 
 </script>
 

@@ -19,31 +19,29 @@
   &::after, &::before {
     content: '';
     position: absolute;
-    top: -0.31em;
+    top: 210%;
     left: 0;
     background: #FFF;
     width: 100%;
     height: 100%;
-    transform: translateY(-50%);
     border-radius: 2px;
+    transition: transform .2s linear;
+    transform-origin: left;
   }
   &::before {
-    bottom: -0.31em;
+    bottom: 210%;
     top: auto;
-    transform: translateY(50%);
   }
 }
 
 .menu-icon--cross {
-  display: none;
-  right: 1.5em;
-  top: 5%;
   background: transparent;
   &::after, &::before {
-    transform: translateY(125%) rotate(45deg);
+    transform-origin: left;
+    transform: rotate(-45deg);
   }
   &::before {
-    transform: translateY(-125%) rotate(-45deg);
+    transform: rotate(45deg);
   }
 }
 
