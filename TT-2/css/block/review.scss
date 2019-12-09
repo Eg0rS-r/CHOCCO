@@ -22,9 +22,12 @@
 
 .review__text {
   margin-top: 0.93em;
+  color: #666666;
+  transition-duration: .3s;
 }
 
 .review__title {
+  transition-duration: .3s;
   font-weight: 500;
   font-size: 30px;
   color: #323232;
@@ -33,9 +36,13 @@
 
 .review__desc {
   font-size: 18px;
-  color: #666666;
   margin-bottom: 1.88em;
   max-width: 25.55em;
+}
+
+.review__names {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .review__name {

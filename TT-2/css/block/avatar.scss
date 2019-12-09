@@ -3,6 +3,9 @@
   height: 16.25rem;
   overflow: hidden;
   margin-right: 20px;
+  &--review {
+    position: relative;
+  }
 }
 
 .avatar-img {
@@ -10,4 +13,12 @@
   height: 100%;
   object-position: center;
   object-fit: cover;
+  &--review {
+    transition-duration: .3s;
+    opacity: 0;
+    position: absolute;
+  }
+  &--active {
+    opacity: 1;
+  }
 }

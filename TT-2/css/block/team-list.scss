@@ -26,26 +26,36 @@
   justify-content: center;
   align-items: stretch;
   &::after {
-    content: '';
+    content: "";
     display: inline-flex;
     margin-top: 0.5em;
     margin-left: 0.37em;
-    border: 0.37em solid transparent; 
+    border: 0.37em solid transparent;
     border-top: 0.37em solid $green;
     border-radius: 0.12em;
+    transition-duration: .4s;
+    transform-origin: 50% 25%;
   }
+  &--active {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+  &--active + .team__desc {
+    opacity: 1;
+  }
+}
+
+.team__desc {
+  transition-duration: .4s;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #666666;
 }
 
 .team__text {
   text-align: center;
-  color: #666666;
-}
-
-.team__desc {
-  height: 0px;
-  opacity: 0;
-  font-size: 18px;
-  font-weight: 300;
   color: #666666;
 }
 
