@@ -235,15 +235,72 @@
           </li>
           <li class="slider__item">
             <div class="slider-col">
-              <img class="slider__img" src="./img/slider/bars-sea.png" alt="батончики">
+              <img class="slider__img" src="./img/slider/bars2.png" alt="батончики">
             </div>
             <div class="slider-col">
+              <div class="comp">
+                <a class="comp__clk" href="#">
+                  <svg class="comp__icon comp__icon--bar">
+                    <use xlink:href="./img/sprite.svg#bar"></use>
+                  </svg>
+                  состав
+                </a>
+                <ul class="comp__list">
+                  <li class="comp__item">
+                    <svg class="comp__icon">
+                      <use xlink:href="./img/sprite.svg#grape"></use>
+                    </svg>
+                    <div class="comp__text">Виноград<span class="value">25 г</span></div>
+                  </li>
+                  <li class="comp__item">
+                    <svg class="comp__icon">
+                      <use xlink:href="./img/sprite.svg#nut"></use>
+                    </svg>
+                    <div class="comp__text">Грецкий орех<span class="value">32 г</span></div>
+                  </li>
+                  <li class="comp__item">
+                    <svg class="comp__icon">
+                      <use xlink:href="./img/sprite.svg#almond"></use>
+                    </svg>
+                    <div class="comp__text">Кунжутное семя<span class="value">20 г</span></div>
+                  </li>
+                  <li class="comp__item">
+                    <svg class="comp__icon">
+                      <use xlink:href="./img/sprite.svg#washing"></use>
+                    </svg>
+                    <div class="comp__text">Сухое молоко<span class="value">10 г</span></div>
+                  </li>
+                  <li class="comp__item">
+                    <svg class="comp__icon">
+                      <use xlink:href="./img/sprite.svg#apither"></use>
+                    </svg>
+                    <div class="comp__text">Зам. сахара<span class="value">4 г</span></div>
+                  </li>
+                  <li class="comp__item">
+                    <svg class="comp__icon">
+                      <use xlink:href="./img/sprite.svg#beans"></use>
+                    </svg>
+                    <div class="comp__text">Какао бобы<span class="value">4 г</span></div>
+                  </li>
+                </ul>
+              </div>
               <div class="slider__text">
-                <h3 class="slider__title">Батончик “Морские
-                  водоросли”</h3>
-                <p class="slider__desc">Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав
-                  также входят: сухое молоко, заменитель сахара и какао бобы.</p>
-                <p class="review__name">Алёна Хмельницкая</p>
+                <h3 class="slider__title">Батончик “Гранола
+                  виноград”</h3>
+                <p class="slider__desc">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят:
+                  сухое молоко, заменитель сахара и какао бобы.</p>
+                <p class="charact">Калорийность
+                  <br><span>110 ккал</span>
+                </p>
+                <p class="charact">
+                  Вес<br><span>95 грамм</span>
+                </p>
+                <div class="price">
+                  140 ₽
+                  <a class="btn btn--slider" href="#">
+                    Отправить
+                  </a>
+                </div>
               </div>
             </div>
           </li>
@@ -629,21 +686,44 @@
   });
 
 
+  // SLIDER
+
+  const left = document.querySelector(".arrow--left");
+  const right = document.querySelector(".arrow--right");
+  const items = document.querySelector(".slider__item");
+  const list = document.querySelector(".slider__list");
+
+  right.addEventListener("click", function (event) {
+    event.preventDefault();
+    list.style.right = '103%';
+  });
+
+  left.addEventListener("click", function (event) {
+    event.preventDefault();
+    list.style.right = '0%';
+  });
+
+
   // COMPOSITION
 
-  const comp__clk = document.querySelector('.comp__clk')
-  const comp = document.querySelector('.comp__list')
+  const comp__clk = document.querySelectorAll('.comp__clk')
+  const comp = document.querySelectorAll('.comp__list')
 
-  comp__clk.addEventListener('click', function (event) {
-    event.preventDefault();
 
-    let width = document.documentElement.clientWidth;
-    if (width > 769) {
-      comp.classList.toggle('comp__list--acitve-right')
-    }
+  for (let i = 0; i < comp__clk.length; i++) {
 
-    comp.classList.toggle('comp__list--active')
-  });
+    comp__clk[i].addEventListener('click', function (event) {
+      event.preventDefault();
+
+      let width = document.documentElement.clientWidth;
+      if (width > 769) {
+        comp[i].classList.toggle('comp__list--acitve-right')
+      }
+
+      comp[i].classList.toggle('comp__list--active')
+    });
+
+  }
 
 
   // TEAM ACCORDION

@@ -28,6 +28,7 @@
   padding: 0 1.25em;
   top: 0;
   right: 0;
+  z-index: 200;
 }
 
 .arrow-icon {
@@ -51,7 +52,9 @@
 .slider__list {
   display: flex;
   max-width: 100%;
+  position: relative;
   right: 0;
+  transition-duration: .6s;
 }
 
 .slider__item {
@@ -122,7 +125,7 @@
 
 .comp {
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
   color: #fff;
   width: 6.42em;

@@ -1035,7 +1035,8 @@ a {
   height: 100vh;
   padding: 0 1.25em;
   top: 0;
-  right: 0; }
+  right: 0;
+  z-index: 200; }
 
 .arrow-icon {
   width: 0.81em;
@@ -1055,7 +1056,9 @@ a {
 .slider__list {
   display: flex;
   max-width: 100%;
-  right: 0; }
+  position: relative;
+  right: 0;
+  transition-duration: .6s; }
 
 .slider__item {
   padding: 0 1.25em;
@@ -1115,7 +1118,7 @@ a {
 
 .comp {
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
   color: #fff;
   width: 6.42em;
