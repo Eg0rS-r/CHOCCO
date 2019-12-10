@@ -42,11 +42,13 @@
     }
   }
   &--active + .team__desc {
+    height: auto;
     opacity: 1;
   }
 }
 
 .team__desc {
+  height: 0px;
   transition-duration: .4s;
   opacity: 0;
   font-size: 18px;

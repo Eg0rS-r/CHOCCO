@@ -730,27 +730,6 @@
       review__item[i].classList.toggle('review-list__item--active')
 
     });
-
-    setInterval(function () {
-      avatar__rev.style.opacity = '0'
-      review__text.style.opacity = '0'
-
-      setTimeout(text__switch(), 290)
-
-      setTimeout(function () {
-        avatar__rev.style.opacity = '1'
-        review__text.style.opacity = '1'
-      }, 340)
-
-      for (let i = 0; i < review__len; i++) {
-        review__item[i].classList.remove("review-list__item--active")
-      }
-
-      review__item[i].classList.toggle('review-list__item--active')
-
-      console.log(i)
-
-    }, 4000);
   }
 
 
