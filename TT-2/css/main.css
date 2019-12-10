@@ -559,6 +559,7 @@ a {
   overflow: hidden;
   margin-right: 20px; }
   .avatar--review {
+    transition-duration: .3s;
     position: relative; }
 
 .avatar-img {
@@ -567,11 +568,13 @@ a {
   object-position: center;
   object-fit: cover; }
   .avatar-img--review {
+    left: 0;
+    top: 0;
     transition-duration: .3s;
-    opacity: 0;
+    z-index: 200;
     position: absolute; }
   .avatar-img--active {
-    opacity: 1; }
+    z-index: 300; }
 
 /*HEADER*/
 .header {
