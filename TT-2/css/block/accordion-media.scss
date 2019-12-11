@@ -1,10 +1,28 @@
 @media screen and (max-width: 768px) {
+  .accord-menu__item {
+    &--active {
+      margin-right: calc(100vw - 100px * 3);
+    }
+  }
+
   .accord__cont {
-    width: auto;
+    width: calc(100vw - 100px * 3);
   }
 }
 
 @media screen and (max-width: 480px) {
+  .accord-menu {
+    width: fit-content;
+  }
+  .accord-menu__item {
+    position: relative;
+    &--active {
+      left: 0;      
+    }
+  }
+  .accord__cont {
+    width: calc(100vw - 100px);
+  }
   .accord__cont {
     position: absolute;
     left: 6.25em;

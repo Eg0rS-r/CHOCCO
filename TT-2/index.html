@@ -388,7 +388,7 @@
       <div class="block-title block-title--accord">Меню</div>
       <ul class="accord-menu">
         <li class="accord-menu__item accord-menu__item--active">
-          <a class="accord__title accord-menu__item--1">
+          <a class="accord__title accord-menu__item--1" href="#">
             <p class="title-text">Батончики с молоком</p>
           </a>
           <div class="accord__cont accord__cont--active">
@@ -396,12 +396,12 @@
             Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно
             питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет
             спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
-            <a class="cross"></a>
+            <a class="cross" href="#"></a>
           </div>
         </li>
 
         <li class="accord-menu__item ">
-          <a class="accord__title accord-menu__item--2">
+          <a class="accord__title accord-menu__item--2" href="#">
             <p class="title-text">С мёдом и фруктами</p>
           </a>
           <div class="accord__cont">
@@ -409,11 +409,11 @@
             Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно
             питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет
             спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
-            <a class="cross"></a>
+            <a class="cross" href="#"></a>
           </div>
         </li>
         <li class="accord-menu__item">
-          <a class="accord__title accord-menu__item--3">
+          <a class="accord__title accord-menu__item--3" href="#">
             <p class="title-text">Дикие ягоды</p>
           </a>
           <div class="accord__cont">
@@ -421,7 +421,7 @@
             Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно
             питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет
             спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
-            <a class="cross"></a>
+            <a class="cross" href="#"></a>
           </div>
         </li>
       </ul>
@@ -481,40 +481,47 @@
     <section class="cont-section decor-elem delivery">
       <div class="container container--form">
         <div class="block-title">Закажите доставку</div>
-        <form class="form-content" action="">
+        <form class="form-content">
           <div class="form__col">
             <div class="form__row">
               <label class="form__label">
                 <span class="form__subtitle">Имя</span>
                 <input type="text" class="form__input" name="name" required>
+                <div class="error"></div>
               </label>
               <label class="form__label">
                 <span class="form__subtitle">Телефон</span>
                 <input type="text" class="form__input" name="phone" required>
+                <div class="error"></div>
               </label>
             </div>
             <div class="form__row">
               <label class="form__label">
                 <span class="form__subtitle">Улица</span>
                 <input class="form__input" name="street" required>
+                <div class="error"></div>
               </label>
             </div>
             <div class="form__row">
               <label class="form__label">
                 <span class="form__subtitle">Дом</span>
                 <input type="text" class="form__input" name="house" required>
+                <div class="error"></div>
               </label>
               <label class="form__label">
                 <span class="form__subtitle">Корпус</span>
                 <input type="text" class="form__input" name="casing" required>
+                <div class="error"></div>
               </label>
               <label class="form__label">
                 <span class="form__subtitle">Квартира</span>
                 <input type="text" class="form__input" name="flat" required>
+                <div class="error"></div>
               </label>
               <label class="form__label">
                 <span class="form__subtitle">Этаж</span>
                 <input type="text" class="form__input" name="floor" required>
+                <div class="error"></div>
               </label>
             </div>
           </div>
@@ -522,7 +529,8 @@
             <div class="form__row">
               <label class="form__label">
                 <span class="form__subtitle">Комментарий</span>
-                <textarea type="text" class="form__textarea form__input" name="" required></textarea>
+                <textarea type="text" class="form__textarea form__input" name="coment" required></textarea>
+                <div class="error"></div>
               </label>
             </div>
             <div class="form__row form__row--radio">
@@ -551,10 +559,10 @@
               </div>
             </div>
             <div class="form__row ">
-              <button class="btn" type="submit">
+              <button class="btn" id="ready" type="submit">
                 Отправить
               </button>
-              <button class="btn btn--clear" type="reset">
+              <button class="btn btn--clear" id="clear" type="reset">
                 Очистить
               </button>
             </div>
@@ -726,6 +734,66 @@
   }
 
 
+  // MENU ACCORDION
+
+  const menu__accord = document.querySelectorAll('.accord-menu__item');
+  const accord__title = document.querySelectorAll('.accord__title');
+  const cont__accord = document.querySelectorAll('.accord__cont');
+  var accord_len = menu__accord.length
+  accord__title
+
+  const close = document.querySelectorAll(".cross")
+
+  let width = document.documentElement.clientWidth;
+
+
+  for (let i = 0; i < accord_len; i++) {
+
+    close[i].addEventListener('click', function (event) {
+      event.preventDefault()
+      if (width <= 480) {
+        menu__accord[i].style.left = i * -100 + 'px'
+      }
+      cont__accord[i].classList.toggle("accord__cont--active")
+      menu__accord[i].classList.toggle('accord-menu__item--active')
+      if (width <= 480) {
+        if (!(menu__accord[i].classList.contains('accord-menu__item--active'))) {
+          menu__accord[i].style.left = 'unset'
+        }
+      }
+
+    });
+  }
+
+  for (let i = 0; i < accord_len; i++) {
+
+    accord__title[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      var prev = i
+      for (let i = 0; i < accord_len; i++) {
+        if (prev != i) {
+          menu__accord[i].classList.remove("accord-menu__item--active")
+          setTimeout(function () {
+            cont__accord[i].classList.remove("accord__cont--active")
+          }, 350)
+        }
+      }
+      if (width <= 480) {
+        menu__accord[i].style.left = i * -100 + 'px'
+      }
+      cont__accord[i].classList.toggle("accord__cont--active")
+      menu__accord[i].classList.toggle('accord-menu__item--active')
+      if (width <= 480) {
+        if (!(menu__accord[i].classList.contains('accord-menu__item--active'))) {
+          menu__accord[i].style.left = 'unset'
+        }
+      }
+
+    });
+  }
+
+
+
   // TEAM ACCORDION
 
   const team__name = document.querySelectorAll('.team__name');
@@ -812,6 +880,88 @@
     });
   }
 
+
+  // FORM
+
+  const form = document.querySelector('.form-content')
+  const btn = document.querySelector('#ready')
+
+
+
+
+  btn.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    if (validForm(form)) {
+      console.log('Все заполнено правильно ')
+
+      var request = new XMLHttpRequest();
+      request.open('POST', 'https://httpbin.org/post', false);
+
+      var formData = new FormData();
+      formData.append('name', form.elements.name.value);
+      formData.append('phone', form.elements.phone.value);
+      formData.append('street', form.elements.street.value);
+      formData.append('house', form.elements.house.value);
+      formData.append('casing', form.elements.casing.value);
+      formData.append('flat', form.elements.flat.value);
+      formData.append('floor', form.elements.floor.value);
+      formData.append('coment', form.elements.coment.value);
+
+      request.send(formData);
+      console.log(request.response);
+
+      // var request = new XMLHttpRequest();
+      // request.open("POST", "http://127.0.0.1:5500/TT-2");
+      // request.send(formData);
+    }
+
+
+  });
+
+  // validation
+  function validForm(form) {
+    let valid = true
+
+    if (!validField(form.elements.name)) {
+      valid = false
+    } else if (!validField(form.elements.phone)) {
+      valid = false
+    } else if (!validField(form.elements.street)) {
+      valid = false
+    } else if (!validField(form.elements.house)) {
+      valid = false
+    } else if (!validField(form.elements.casing)) {
+      valid = false
+    } else if (!validField(form.elements.flat)) {
+      valid = false
+    } else if (!validField(form.elements.floor)) {
+      valid = false
+    } else if (!validField(form.elements.coment)) {
+      valid = false
+    }
+
+    return valid
+  }
+
+  function validField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+  }
+
+
+
+
+
+  // var rec = new XMLHttpRequest();
+
+  // function request() {
+  //   let form_data = new FormData;
+  //   form_data.append()
+  // }
+
+  // rec.open('POST', 'https://webdev-api.loftschool.com/sendmail', true)
+  // rec.onload = request
 
 
 </script>
