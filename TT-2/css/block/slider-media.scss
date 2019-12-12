@@ -8,11 +8,12 @@
   .slider__item {
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   .comp {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: -14%;
+    right: 2%;
   }
   .slider-col {
     padding-left: 0;
@@ -58,6 +59,14 @@
       left: 0%;
       right: unset;
     }
+  }
+  .slider__item {
+    margin-right: 50px;
+  }
+  .comp {
+    position: absolute;
+    top: -9%;
+    right: 2%;
   }
   .slider__desc {
     max-width: unset;

@@ -703,7 +703,7 @@
 
   right.addEventListener("click", function (event) {
     event.preventDefault();
-    list.style.right = '103%';
+    list.style.right = '112%';
   });
 
   left.addEventListener("click", function (event) {
@@ -896,7 +896,9 @@
       console.log('Все заполнено правильно ')
 
       var request = new XMLHttpRequest();
-      request.open('POST', 'https://httpbin.org/post', false);
+      request.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+
+      
 
       var formData = new FormData();
       formData.append('name', form.elements.name.value);
@@ -910,6 +912,16 @@
 
       request.send(formData);
       console.log(request.response);
+      console.log(formData);
+      request.addEventListener('load', () => {
+        if (request.status >= 400) {
+          console.log('something worng')
+        } else {
+          console.log('DONE')
+        }
+      })
+      console.log(request.status)
+
 
       // var request = new XMLHttpRequest();
       // request.open("POST", "http://127.0.0.1:5500/TT-2");
