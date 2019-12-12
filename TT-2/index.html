@@ -703,7 +703,10 @@
 
   right.addEventListener("click", function (event) {
     event.preventDefault();
-    list.style.right = '112%';
+    list.style.right = '103%';
+    if (width<=480) {
+      list.style.right = '112%';
+    }
   });
 
   left.addEventListener("click", function (event) {
