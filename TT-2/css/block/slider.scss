@@ -20,14 +20,17 @@
   }
 }
 
+.container--slider {
+  flex-direction: row;
+  position: relative;
+}
+
 .arrow {
-  display: flex;
   position: absolute;
-  align-items: center;
-  height: 100vh;
+  width: auto;
   padding: 0 1.25em;
-  top: 0;
-  right: 0;
+  top: 50%;
+  left: 100%;
   z-index: 200;
 }
 
@@ -38,8 +41,8 @@
 }
 
 .arrow--left {
-  left: 0;
-  right: unset;
+  right: 100%;
+  left: unset;
   transform: rotate(180deg);
 }
 
@@ -62,6 +65,7 @@
   display: flex;
   min-width: 100%;
   height: inherit;
+  margin-right: 50px;
 }
 
 .slider-col {
@@ -76,7 +80,8 @@
 }
 
 .slider__img {
-  width: 91%;
+  width: 395px;
+  height: auto;
 }
 
 .slider__text {
