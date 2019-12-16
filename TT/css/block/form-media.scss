@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+  .delivery {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .container--form {
+    align-items: center;
+  }
+  .form-content {
+    flex-direction: column;
+    align-items: center;
+    max-width: 26.11em;
+  }
+  .form__col {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.83em;
+  }
+  .form__row {
+    justify-content: center;
+  }
+
+  .form__row--radio {
+    margin-top: 2.77em;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .container--form {
+    padding: 0 0.55em;
+  }
+  .form__content {
+    width: 100%;
+  }
+  .form__row--radio {
+    margin-top: 1.11em;
+  }
+  .form__row--btn {
+    margin-bottom: 1.11em;
+  }
+  .form__textarea {
+    height: 5.55em;
+  }
+}

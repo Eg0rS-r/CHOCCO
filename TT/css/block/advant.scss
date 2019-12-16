@@ -1,0 +1,12 @@
+.advant {
+  background: url(../img/why-chocco/leaves-pattern.png) 0% 50% no-repeat, #fff;
+  display: flex;
+  align-items: center;
+  &::before {
+    background-image: url(../img/why-chocco/raspberries.png);
+    top: 68%;
+    left: 0%;
+    width: 10.06rem;
+    height: 19.68rem;
+  }
+}

@@ -1,0 +1,59 @@
+.intro {
+  width: 100%;
+  display: flex;
+  background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
+  color: #fff;
+  padding-bottom: 2.81em;
+  padding-top: 1.5em;
+  flex-direction: column;
+  align-items: stretch;
+
+  &::before {
+    background-image: url(../img/intro/decor-intro2.png);
+    top: 91%;
+    left: 3%;
+    width: 3.68em;
+    height: 7em;
+  }
+  &::after {
+    background-image: url(../img/intro/decor-intro1.png);
+    top: 55%;
+    right: 1%;
+    width: 28.75em;
+    height: 21.31em;
+  }
+}
+
+.container--intro {
+  height: 100%;
+  display: inline-flex;
+}
+
+.intro__bars {
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  z-index: 0;
+  max-width: 31.43rem;
+  max-height: 32.68rem;
+  object-fit: cover;
+}
+
+.split {
+  flex: 1;
+  display: flex;
+}
+
+.split__block {
+  flex: 1;
+  display: inline-flex;
+  &--left {
+    align-items: center;
+    z-index: 1;
+  }
+  &--right {
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}

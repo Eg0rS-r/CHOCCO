@@ -1,0 +1,32 @@
+.text {
+  &--center {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3.12rem;
+  }
+  &--card {
+    margin-bottom: 1.12em;
+  }
+}
+
+.text__title {
+  font-weight: bold;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 60px;
+  margin-bottom: 0.16em;
+  &--card {
+    text-transform: capitalize;
+    font-size: 27px;
+    line-height: normal;
+  }
+}
+
+.text__desc {
+  max-width: 500px;
+  color: #666666;
+  font-size: 18px;
+  &--card {
+    font-weight: 300;
+  }
+}

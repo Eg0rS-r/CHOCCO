@@ -1,0 +1,109 @@
+.accordion {
+  width: 100%;
+  color: $white;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.2) 0%, 
+    rgba(#000, 0.2) 100%
+    ),
+    url(../img/accordion/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.block-title--accord {
+  position: absolute;
+  left: 7%;
+  top: 13%;
+}
+
+.accord-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row; 
+}
+
+.accord-menu__item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transition-duration: .4s;
+  &--active {
+    margin-right: 530px;
+  }
+}
+
+.accord__title {
+  max-width: 100px; 
+  height: 100vh;
+  color: #FFF;
+  background-position: center;
+  background-size: cover;
+}
+
+.title-text {
+  width: 2.08em;
+  height: 100vh;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 0.52em;
+  font-size: 48px;
+}
+
+.accord-menu__item--1 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.6) 0%, 
+    rgba(#000, 0.6) 100%
+    ),
+    url(../img/accordion/item1.jpg);
+}
+
+.accord-menu__item--2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.6) 0%, 
+    rgba(#000, 0.6) 100%
+    ),
+    url(../img/accordion/item3.jpg);
+}
+
+.accord-menu__item--3 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#000, 0.6) 0%, 
+    rgba(#000, 0.6) 100%
+    ),
+    url(../img/accordion/item2.jpg);
+};
+
+.accord__cont {
+  padding: 1.56em;
+  padding-top: 2.81em;
+  padding-right: 5em;
+  width: 530px;
+  flex-direction: row;
+  position: absolute;
+  height: 100%;
+  left: 100%;
+  background: rgba(47, 50, 52, 0.93);
+  line-height: 1.5em;
+  display: none;
+  &--active {
+    display: block;
+  }
+}
+
+.accord__text {
+  margin-top: 1.25em;
+  margin-right: 3.12em;
+  line-height: 1.5em;
+}
+
+

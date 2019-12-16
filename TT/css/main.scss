@@ -1,0 +1,208 @@
+@import "./layout/normalize";
+@import "./layout/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Alegreya_Sans";
+  font-size: 16px;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #0d0d0d;
+}
+
+// COLORS
+$green: #0f5a47;
+$white: #fff;
+$text-black: #0d0d0d;
+$text-grey: #666666;
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+
+  }
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  transition-duration: .5s;
+  top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-section {
+  height: 100vh;
+  position: relative;
+}
+
+.block-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 45px;
+  &--margin {
+    margin-bottom: 10px;
+  }
+  &--left {
+    text-align: left;
+    flex: 1;
+    margin-top: 95px;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-family: "Museo_Sans";
+  font-size: 24px;
+  line-height: 21px;
+  width: 50px;
+  font-weight: 500;
+}
+
+.decor-elem {
+  &::before {
+    content: "";
+    position: absolute;
+    background-size: cover;
+    z-index: 100;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-size: cover;
+    z-index: 100;
+  }
+}
+
+.cross {
+  width: 1.12em;
+  height: 1.12em;
+  background-size: cover;
+  position: absolute;
+  right: 4%;
+  top: 3%;
+  background-image: url(../img/cross.png);
+}
+
+@import "./block/btn";
+@import "./block/progress-bar";
+@import "./block/text";
+@import "./block/avatar";
+
+
+/*HEADER*/
+
+@import "./block/header";
+@import "./block/menu";
+@import "./block/contact";
+@import "./block/header-media";
+
+
+/*INTRO*/
+
+@import "./block/intro";
+@import "./block/intro-text";
+@import "./block/features";
+@import "./block/intro-media";
+
+
+/*ADVANTAGES*/
+
+@import "./block/advant";
+@import "./block/card-list";
+@import "./block/advant-media";
+
+
+/*SLIDER*/
+
+@import "./block/slider";
+@import "./block/slider-media";
+
+
+/*FEEDBACK*/
+
+@import "./block/feedback";
+@import "./block/review";
+@import "./block/review-list";
+@import "./block/review-media";
+
+
+/*TEAM*/
+
+@import "./block/team";
+@import "./block/team-list";
+@import "./block/team-media";
+
+
+/*ACCORDION*/
+
+
+@import "./block/accordion";
+@import "./block/accordion-media";
+
+
+/*FORM*/
+
+@import "./block/form";
+@import "./block/form-media";
+
+
+/*MAP*/
+
+@import "./block/map";
+@import "./block/map-media";
+
+
+/*FOOTER*/
+
+@import "./block/footer";
+@import "./block/footer-media";
+
+
+/*POPUP*/
+
+@import "./block/popup";

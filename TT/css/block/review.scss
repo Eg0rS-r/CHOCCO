@@ -1,0 +1,52 @@
+.review {
+  background: url(../img/feedback/rasp-bush.jpg) 100% 0% no-repeat, #F8FAF9;
+  display: flex;
+  align-items: center;
+  padding: 3.12em 0 2.18em 2.81em;
+  position: relative;
+  margin-bottom: 1.43em;
+  width: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 5em;
+    height: 3.12em;
+    top: 0%;
+    left: 50%;
+    border-radius: 50%;
+    background: #fff;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.review__text {
+  margin-top: 0.93em;
+  color: #666666;
+  transition-duration: .3s;
+}
+
+.review__title {
+  transition-duration: .3s;
+  font-weight: 500;
+  font-size: 30px;
+  color: #323232;
+  margin-bottom: 1.13em;
+}
+
+.review__desc {
+  font-size: 18px;
+  margin-bottom: 1.88em;
+  max-width: 25.55em;
+}
+
+.review__names {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.review__name {
+  font-size: 18px;
+  color: #666666;
+  font-weight: 500;
+}
