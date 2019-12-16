@@ -7,6 +7,9 @@
       display: none;
     }
   }
+  .slider {
+    overflow: unset;
+  }
   .slider__item {
     flex-direction: column;
     align-items: center;

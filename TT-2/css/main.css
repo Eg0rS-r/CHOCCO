@@ -1051,6 +1051,7 @@ a {
   transform: rotate(180deg); }
 
 .slider {
+  overflow: hidden;
   display: flex;
   width: 100%;
   margin: 0 0.62em; }
@@ -1067,7 +1068,7 @@ a {
   display: flex;
   min-width: 100%;
   height: inherit;
-  margin-right: 50px; }
+  margin-right: 250px; }
 
 .slider-col {
   display: flex;
@@ -1200,6 +1201,9 @@ a {
     padding-top: 80px; }
     .slider-block::before, .slider-block::after {
       display: none; }
+
+  .slider {
+    overflow: unset; }
 
   .slider__item {
     flex-direction: column;
