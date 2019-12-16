@@ -585,7 +585,8 @@ a {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  z-index: 200; }
 
 .menu {
   display: flex;
@@ -1018,7 +1019,8 @@ a {
   align-items: center;
   background-color: #f8faf9;
   padding: 0 1.56em;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .slider-block::before {
     background-image: url(../img/slider/leave.png);
     top: 71%;
@@ -1033,6 +1035,10 @@ a {
     height: 5.75em; }
 
 .container--slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
   flex-direction: row;
   position: relative; }
 

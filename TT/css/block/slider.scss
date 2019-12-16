@@ -4,6 +4,7 @@
   background-color: #f8faf9;
   padding: 0 1.56em;
   position: relative;
+  overflow: hidden;
   &::before {
     background-image: url(../img/slider/leave.png);
     top: 71%;
@@ -21,6 +22,8 @@
 }
 
 .container--slider {
+  @include center-flex;
+  flex: 1;
   flex-direction: row;
   position: relative;
 }
