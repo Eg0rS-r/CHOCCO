@@ -50,9 +50,7 @@ task("styles", () => {
     ))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(env === 'prod',
-      gcmq()
-    ))
+    .pipe(gcmq())
     .pipe(px2rem())
     .pipe(gulpif(env === 'prod',
       autoprefixer({

@@ -16,19 +16,25 @@
   background: $white;
   margin-bottom: 16px;
   position: relative;
+  transition-duration: .5s;
   &:last-child {
     margin-bottom: 0;
   }
-  &--active::after{
+  &--active-dark::after, &--active-light::after{
     content: '';
     display: block;
     position: absolute;
     width: 15px;
     height: 15px;
     border: 1px solid $white;
+    transition-duration: .5s;
     border-radius: 50%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  &--active-dark::after{
+    border-color: #666666;
+  }
 }
+
