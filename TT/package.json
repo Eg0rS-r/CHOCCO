@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "corss-env NODE_ENV=dev gulp",
-    "build": "corss-env NODE_ENV=prod gulp"
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "browser-sync": "^2.26.7",
+    "cross-env": "^6.0.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",

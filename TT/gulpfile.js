@@ -16,6 +16,7 @@ var uglify = require('gulp-uglify');
 
 const env = process.env.NODE_ENV;
 
+const { DIST_PATH, SRC_PATH } = require("./gulp.config")
 
 sass.compiler = require('node-sass');
 
@@ -27,6 +28,18 @@ task("clean", () => {
 task("copy:html", () => {
   return src("src/*.html")
     .pipe(dest("dist"))
+    .pipe(reload({ stream: true }));
+})
+
+task("copy:img", () => {
+  return src("src/img/**/*")
+    .pipe(dest("dist/img"))
+    .pipe(reload({ stream: true }));
+})
+
+task("copy:fonts", () => {
+  return src("src/fonts/**/*")
+    .pipe(dest("dist/fonts"))
     .pipe(reload({ stream: true }));
 })
 
@@ -61,11 +74,13 @@ task("scripts", () => {
     .pipe(gulpif(env === 'dev',
       sourcemaps.init()
     ))
-    .pipe(concat('main.js'))
+    .pipe(concat('main.min.js'))
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(uglify())
+    .pipe(gulpif(env === "prod",
+      uglify()
+    ))
     .pipe(gulpif(env === "dev",
       sourcemaps.write()
     ))
@@ -76,7 +91,7 @@ task("scripts", () => {
 task("server", () => {
   browserSync.init({
     server: {
-      baseDir: "./dist"
+      baseDir: "dist"
     },
     open: false
   })
@@ -84,15 +99,15 @@ task("server", () => {
 
 
 task("watch", () => {
-  watch("./src/styles/**/*.scss", series("styles"))
-  watch("./src/*.html", series("copy:html"))
-  watch("./src/scripts/*.js")
-  watch("./src/images/icons/*.svg")
+  watch("src/styles/**/*.scss", series("styles"))
+  watch("src/*.html", series("copy:html"))
+  watch("src/scripts/*.js", series("scripts"))
+  watch("src/images/icons/*.svg")
 })
 
 
 task("default", series(
   "clean",
-  parallel("styles", "copy:html", "scripts"),
+  parallel("copy:html", "copy:img", "copy:fonts", "scripts", "styles"),
   parallel("server", "watch")
 ))
