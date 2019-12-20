@@ -13,7 +13,6 @@ html {
 body {
   font-family: "Alegreya_Sans";
   font-size: 16px;
-  overflow: hidden;
 }
 
 ul {
@@ -59,7 +58,8 @@ $text-grey: #666666;
 .wrapper {
   width: 100%;
   position: relative;
-  transition-duration: .5s;
+  transition-duration: 1s;
+  overflow: hidden;
   top: 0;
 }
 

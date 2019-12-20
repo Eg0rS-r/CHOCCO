@@ -20,10 +20,16 @@
     }
   ]
 
+  var z = 14
+
+  if (document.documentElement.clientWidth <= 480) {
+    z = 13
+  };
+
   function init() {
     var myMap = new ymaps.Map('map', {
       center: [55.75015890065583, 37.590421042782516],
-      zoom: 14,
+      zoom: z,
       controls: ['smallMapDefaultSet'],
 
     }, {

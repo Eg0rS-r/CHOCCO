@@ -7,13 +7,12 @@
   const bar_link_activeD = $('.progress-bar__link--active-dark')
   const bar_link_activeL = $('.progress-bar__link--active-light')
   let top_wrap = 1
+  var inScroll = false
 
   console.log(bar_link)
 
   function scorll() {
     if ((wrap_len > top_wrap) && !(top_wrap < 0)) {
-      let top = top_wrap * (-100) + 'vh'
-
       bar_link.removeClass('progress-bar__link--active-light')
       bar_link.removeClass('progress-bar__link--active-dark')
       switch (top_wrap) {
@@ -58,9 +57,17 @@
           bar_link_arr[top_wrap].classList.add('progress-bar__link--active-dark');
           break;
       }
+
+      let top = top_wrap * (-100) + 'vh'
+      inScroll = true
       wrap.css('top', top_wrap * (-100) + 'vh')
       top_wrap = top_wrap + 1
       console.log(wrap.css('top'))
+      console.log('scorll')
+      setTimeout(() => {
+        console.log('time')
+        inScroll = false
+      }, 1500)
     }
   }
 
@@ -82,20 +89,41 @@
     scorll()
   })
 
+  document.addEventListener('keydown', e => {
+    e.preventDefault()
+    switch (e.keyCode) {
+      case 40:
+        scorll()
+        break;
+      case 38:
+        top_wrap = top_wrap - 2
+        if (top_wrap <= -1) {
+          top_wrap = 0
+        }
+        scorll()
+        break;
+      default:
+        break;
+    }
+  })
+
+
   wrap.on('wheel', function (e) {
     e.preventDefault();
-    console.log(top_wrap)
 
-    if (e.originalEvent.deltaY < 0) {
-      top_wrap = top_wrap - 2
+    if (!inScroll) {
 
+      if (e.originalEvent.deltaY < 0) {
+        top_wrap = top_wrap - 2
+
+      }
+      if (top_wrap <= -1) {
+        top_wrap = 0
+      }
+      scorll()
     }
-    if (top_wrap <= -1) {
-      top_wrap = 0
-    }
-    console.log(e.originalEvent)
 
-    scorll()
+    console.log('done')
 
   })
 })()

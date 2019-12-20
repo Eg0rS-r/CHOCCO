@@ -18,10 +18,10 @@
     left: 0;
     top: 0;
     transition-duration: .3s;
-    z-index: 200;
+    z-index: 99;
     position: absolute;
   }
   &--active {
-    z-index: 300;
+    z-index: 100;
   }
 }
