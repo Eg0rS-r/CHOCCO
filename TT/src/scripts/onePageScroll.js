@@ -1,3 +1,4 @@
+
 ; (function () {
   const wrap = $('.wrapper')
   const wrap_len = $('section').length
@@ -11,7 +12,7 @@
 
   console.log(bar_link)
 
-  function scorll() {
+  function scroll() {
     if ((wrap_len > top_wrap) && !(top_wrap < 0)) {
       bar_link.removeClass('progress-bar__link--active-light')
       bar_link.removeClass('progress-bar__link--active-dark')
@@ -79,28 +80,27 @@
     bar_link.removeClass("progress-bar__link--active-dark");
     $(this).addClass('progress-bar__link--active-light');
     console.log(top_wrap)
-    scorll()
+    scroll()
   })
 
   menu_item_link.on('click', function (e) {
     e.preventDefault();
-    top_wrap = $(this).index()
+    top_wrap = $(this).index() + 1
     console.log(top_wrap)
-    scorll()
+    scroll()
   })
 
   document.addEventListener('keydown', e => {
-    e.preventDefault()
     switch (e.keyCode) {
       case 40:
-        scorll()
+        scroll()
         break;
       case 38:
         top_wrap = top_wrap - 2
         if (top_wrap <= -1) {
           top_wrap = 0
         }
-        scorll()
+        scroll()
         break;
       default:
         break;
@@ -120,10 +120,28 @@
       if (top_wrap <= -1) {
         top_wrap = 0
       }
-      scorll()
+      scroll()
     }
 
     console.log('done')
 
   })
+
+  $("body").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == "up") {
+        scroll()
+        console.log("up")
+      }
+      if (direction == "down") {
+        top_wrap = top_wrap - 2
+        if (top_wrap <= -1) {
+          top_wrap = 0
+        }
+        scroll()
+        console.log('down')
+      }
+    }
+  });
+
 })()

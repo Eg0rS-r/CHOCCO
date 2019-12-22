@@ -1,0 +1,142 @@
+.video-sec {
+  background: #f8faf9;
+  display: flex;
+  align-items: center;
+  &::before {
+    background-size: cover;
+    background-image: url(../img/video/decor2.png);
+    top: 15%;
+    left: 7%;
+    width: 911px;
+    height: 501px;
+    z-index: 1;
+  }
+  &::after {
+    background-image: url(../img/video/decor1.png);
+    background-size: cover;
+    top: 75%;
+    left: 82%;
+    width: 242px;
+    height: 264px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .player {
+    width: 640px;
+    height: 359px;
+  }
+  .video-sec {
+    &::before {
+      top: 17%;
+      left: -2%;
+      width: 727px;
+      height: 390px;
+    }
+    &::after {
+      top: 90%;
+      left: unset;
+      right: 0%;
+      width: 103px;
+      height: 148px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .player {
+    width: 390px;
+    height: 218px;
+  }
+  .play--video {
+    width: 49px;
+    transform: translate(-50%, 0%);
+  }
+}
+
+.container--video {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.video-player {
+  max-width: 660px;
+  z-index: 100;
+}
+
+.player {
+  width: 660px;
+  height: 370px;
+  overflow: hidden;
+}
+
+#video {
+  width: 100%;
+}
+
+.play--video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -30%);
+  &-active {
+    visibility: hidden;
+  }
+}
+
+.toolbar {
+  display: flex;
+  width: 100%;
+  background-color: #3e3e3e;
+  align-items: center;
+  height: 35px;
+  padding: 0 20px;
+}
+
+.duration {
+  display: flex;
+  flex: 1;
+  margin-right: 40px;
+  align-items: center;
+}
+
+.volum {
+  display: flex;
+  align-items: center;
+}
+
+.play--toolbar {
+  cursor: pointer;
+  margin-right: 15px;
+  height: 20px;
+}
+
+.volum__img {
+  margin-right: 18px;
+}
+
+.duration__length {
+  cursor: pointer;
+  height: 4px;
+  border-radius: 1px;
+  background: #626262;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  flex: 1;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #626262;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+  &--volum {
+    flex: unset;
+    width: 60px;
+  }
+}
