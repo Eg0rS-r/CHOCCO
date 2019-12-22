@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   &::before {
-    background-size: cover;
+    background-size: auto;
     background-image: url(./img/video/decor2.png);
     top: 15%;
     left: 7%;

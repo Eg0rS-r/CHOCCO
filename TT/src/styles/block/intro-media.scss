@@ -5,7 +5,7 @@
   .intro {
     background-position: 100% -3%;
     &::before {
-      background: url(../img/intro/media/decor-media1.png);
+      background: url(./img/intro/media/decor-media1.png);
       background-size: cover;
       top: 24%;
       left: 21%;
@@ -14,7 +14,7 @@
       z-index: 0;
     }
     &::after {
-      background: url(../img/intro/media/decor-media2.png);
+      background: url(./img/intro/media/decor-media2.png);
       background-size: cover;
       top: 22%;
       z-index: 0;
