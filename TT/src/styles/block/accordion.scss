@@ -6,7 +6,7 @@
     rgba(#000, 0.2) 0%, 
     rgba(#000, 0.2) 100%
     ),
-    url(../img/accordion/bg.jpg);
+    url(./img/accordion/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover; 
 }
@@ -62,7 +62,7 @@
     rgba(#000, 0.6) 0%, 
     rgba(#000, 0.6) 100%
     ),
-    url(../img/accordion/item1.jpg);
+    url(./img/accordion/item1.jpg);
 }
 
 .accord-menu__item--2 {
@@ -71,7 +71,7 @@
     rgba(#000, 0.6) 0%, 
     rgba(#000, 0.6) 100%
     ),
-    url(../img/accordion/item3.jpg);
+    url(./img/accordion/item3.jpg);
 }
 
 .accord-menu__item--3 {
@@ -80,7 +80,7 @@
     rgba(#000, 0.6) 0%, 
     rgba(#000, 0.6) 100%
     ),
-    url(../img/accordion/item2.jpg);
+    url(./img/accordion/item2.jpg);
 };
 
 .accord__cont {

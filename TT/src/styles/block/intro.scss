@@ -1,7 +1,7 @@
 .intro {
   width: 100%;
   display: flex;
-  background: url(../img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
+  background: url(./img/intro/pattern.png) 100% 50% no-repeat, #61c4d9;
   color: #fff;
   padding-bottom: 2.81em;
   padding-top: 1.5em;
@@ -9,14 +9,14 @@
   align-items: stretch;
 
   &::before {
-    background-image: url(../img/intro/decor-intro2.png);
+    background-image: url(./img/intro/decor-intro2.png);
     top: 91%;
     left: 3%;
     width: 3.68em;
     height: 7em;
   }
   &::after {
-    background-image: url(../img/intro/decor-intro1.png);
+    background-image: url(./img/intro/decor-intro1.png);
     top: 55%;
     right: 1%;
     width: 28.75em;

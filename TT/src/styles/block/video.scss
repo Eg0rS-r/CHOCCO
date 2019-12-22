@@ -4,7 +4,7 @@
   align-items: center;
   &::before {
     background-size: cover;
-    background-image: url(../img/video/decor2.png);
+    background-image: url(./img/video/decor2.png);
     top: 15%;
     left: 7%;
     width: 911px;
@@ -12,7 +12,7 @@
     z-index: 1;
   }
   &::after {
-    background-image: url(../img/video/decor1.png);
+    background-image: url(./img/video/decor1.png);
     background-size: cover;
     top: 75%;
     left: 82%;

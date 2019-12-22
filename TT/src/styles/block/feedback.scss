@@ -1,14 +1,14 @@
 .feedback {
   padding-top: 3.5em;
   &::before {
-    background-image: url(../img/feedback/decor-feedback1.png);
+    background-image: url(./img/feedback/decor-feedback1.png);
     top: 5%;
     right: 1%;
     width: 9.4rem;
     height: 5.39rem;
   }
   &::after {
-    background-image: url(../img/feedback/decor-feedback2.png);
+    background-image: url(./img/feedback/decor-feedback2.png);
     top: 76%;
     left: 0%;
     width: 8.68rem;
