@@ -13,7 +13,7 @@
   }
   &::after {
     background-image: url(./img/video/decor1.png);
-    background-size: cover;
+    background-size: auto;
     top: 75%;
     left: 82%;
     width: 242px;
@@ -73,6 +73,10 @@
 
 #video {
   width: 100%;
+  &[poster] {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .play--video {
