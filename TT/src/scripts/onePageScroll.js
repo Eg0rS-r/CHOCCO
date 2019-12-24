@@ -127,21 +127,39 @@
 
   })
 
-  $("body").swipe({
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-      if (direction == "up") {
-        scroll()
-        console.log("up")
+  const toolbar = document.querySelector('.toolbar')
+
+  let touchStartY = 0;
+  let touchEndY = 0;
+
+  document.addEventListener('touchstart', e => {
+    touchStartY = e.changedTouches[0].screenY;
+  }, false);
+
+  document.querySelector(".wrapper").addEventListener('touchmove', e => e.preventDefault());
+
+  document.addEventListener('touchend', e => {
+    touchEndY = e.changedTouches[0].screenY;
+    let direct = swipeDirect();
+    if (direct == 'up') {
+      scroll()
+    } else if (direct == 'down') {
+      top_wrap = top_wrap - 2
+      if (top_wrap <= -1) {
+        top_wrap = 0
       }
-      if (direction == "down") {
-        top_wrap = top_wrap - 2
-        if (top_wrap <= -1) {
-          top_wrap = 0
-        }
-        scroll()
-        console.log('down')
-      }
+      scroll()
     }
-  });
+  }, false);
+
+  function swipeDirect() {
+    let dif = touchStartY - touchEndY;
+    if (dif > 100) {
+      return 'up';
+    } else if (dif < - 100) {
+      return 'down';
+    }
+  }
+
 
 })()
